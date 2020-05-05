@@ -9,3 +9,14 @@ C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa Datos\obj\Debug\C
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa Datos\obj\Debug\Capa Datos.csproj.CopyComplete
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa Datos\obj\Debug\Capa Datos.dll
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\bin\Debug\Capa Datos.dll.config
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\bin\Debug\EntityFramework.dll
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\bin\Debug\EntityFramework.xml
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\obj\Debug\Capa Datos.csproj.CopyComplete
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\obj\Debug\Capa Datos.pdb

@@ -23,6 +23,11 @@ namespace Dominio
             CreateMap<bd.Empleados, ent.EmpleadosE>();
             //Entidades BD
             CreateMap<ent.EmpleadosE, bd.Empleados>();
+            //Entidades Rol BD
+            CreateMap<bd.Rol,ent.RolE >();
+            //BD to ent
+            CreateMap<ent.RolE, bd.Rol>();
+
         }
     }
 }

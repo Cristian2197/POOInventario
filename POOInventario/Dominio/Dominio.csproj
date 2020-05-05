@@ -57,6 +57,7 @@
     <Compile Include="EmpleadosD.cs" />
     <Compile Include="MapeoBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolD.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
