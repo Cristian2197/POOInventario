@@ -1,0 +1,11 @@
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\bin\Debug\Repositorio.dll.config
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\bin\Debug\Repositorio.dll
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\obj\Debug\Repositorio.dll
+C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\obj\Debug\Repositorio.pdb
