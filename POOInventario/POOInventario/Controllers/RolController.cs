@@ -42,5 +42,19 @@ namespace POOInventario.Controllers
             new dom.RolD().ModificarRol(RolEditado);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Eliminar(int? id)
+        {
+            var roles = new dom.RolD().RolesPorID((int)id);
+            return PartialView(roles);
+        }
+        [HttpPost, ActionName("Eliminar")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EliminarConfirmado(int id)
+        {
+            var Rol = new dom.RolD().RolesPorID(id);
+            new dom.RolD().EliminarRol(Rol);
+            return RedirectToAction("Index");
+        }
     }
 }
