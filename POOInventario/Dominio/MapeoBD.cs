@@ -28,6 +28,20 @@ namespace Dominio
             //BD to ent
             CreateMap<ent.RolE, bd.Rol>();
 
+            //Entidades de la base de datos hasta entidades para clasificación
+            CreateMap<bd.Clasificacion, ent.ClasificacionE>();
+            //Entidades BD clasificación
+            CreateMap<ent.ClasificacionE, bd.Clasificacion>();
+
+            //Entidades de la base de datos hasta entidades para cliente
+            CreateMap<bd.Cliente, ent.ClienteE>();
+            //Entidades BD cliente
+            CreateMap<ent.ClienteE, bd.Cliente>();
+
+            //Entidades de la base de datos hasta entidades para categorias
+            CreateMap<bd.categorias, ent.CategoriasE>();
+            //Entidades BD categorias
+            CreateMap<ent.CategoriasE, bd.categorias>();
         }
     }
 }

@@ -227,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\ClasificacionController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\RolController.cs" />
     <Compile Include="Global.asax.cs">
@@ -254,6 +257,15 @@
     <Content Include="Views\Rol\Index.cshtml" />
     <Content Include="Views\Rol\Crear.cshtml" />
     <Content Include="Views\Rol\Editar.cshtml" />
+    <Content Include="Views\Clasificacion\Index.cshtml" />
+    <Content Include="Views\Clasificacion\Crear.cshtml" />
+    <Content Include="Views\Clasificacion\Editar.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Categorias\Crear.cshtml" />
+    <Content Include="Views\Categorias\Editar.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Crear.cshtml" />
+    <Content Include="Views\Cliente\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

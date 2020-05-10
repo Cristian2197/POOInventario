@@ -9,3 +9,15 @@ C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\obj\Debug\
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\obj\Debug\Repositorio.dll
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Repositorio\obj\Debug\Repositorio.pdb
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\bin\Debug\Repositorio.dll.config
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\bin\Debug\Repositorio.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.pdb
