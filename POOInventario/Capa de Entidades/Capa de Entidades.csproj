@@ -46,6 +46,7 @@
     <Compile Include="CategoriasE.cs" />
     <Compile Include="ClasificacionE.cs" />
     <Compile Include="ClienteE.cs" />
+    <Compile Include="ProductoE.cs" />
     <Compile Include="RolE.cs" />
     <Compile Include="EmpleadosE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
