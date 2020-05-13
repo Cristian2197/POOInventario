@@ -330,6 +330,9 @@ C:\Users\linke\Source\Repos\POOInventario\POOInventario\POOInventario\obj\Debug\
 C:\Users\linke\Source\Repos\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.csproj.CopyComplete
 C:\Users\linke\Source\Repos\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.dll
 C:\Users\linke\Source\Repos\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.pdb
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\POOInventario.dll.config
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\POOInventario.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\POOInventario.pdb
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\csc.exe
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\csc.exe.config
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\csc.rsp
@@ -379,3 +382,47 @@ C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\vbc.rsp
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\VBCSCompiler.exe
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\AutoMapper.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Capa Datos.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Capa de Entidades.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Dominio.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\EntityFramework.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\EntityFramework.SqlServer.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Helpers.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Mvc.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Razor.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Webpages.Deployment.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Webpages.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Webpages.Razor.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Repositorio.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Capa Datos.pdb
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Capa Datos.dll.config
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Capa de Entidades.pdb
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Dominio.pdb
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Dominio.dll.config
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\AutoMapper.pdb
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\AutoMapper.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\EntityFramework.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\EntityFramework.SqlServer.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Razor.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Webpages.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Webpages.Deployment.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Webpages.Razor.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Helpers.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\System.Web.Mvc.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Repositorio.pdb
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\Repositorio.dll.config
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\es\System.Web.Razor.resources.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\es\System.Web.Webpages.resources.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\es\System.Web.Helpers.resources.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\es\System.Web.Mvc.resources.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.csprojAssemblyReference.cache
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.csproj.CoreCompileInputs.cache
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.csproj.CopyComplete
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.dll
+C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.pdb

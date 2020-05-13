@@ -1,0 +1,48 @@
+﻿@model Capa_de_Entidades.ClasificacionE
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+    <center> <h3>¿Esta seguro que lo quiere eliminar?</h3></center>
+    <div>
+        <div id="dvEliminarCliente">
+            <form action="Cliente/Eliminar" method="post">
+
+
+
+                <div>
+
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.id_clasi)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.id_clasi)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.nombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.nombre)
+                        </dd>
+
+                    </dl>
+                    <div class="form-actions no-color">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Eliminar</button>
+
+                        </div>
+                    </div>
+                </div>
+                </form>
+                </div>
+
+                   
+                </div>
+                }
