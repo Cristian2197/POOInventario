@@ -27,6 +27,15 @@ namespace Dominio
             CreateMap<bd.Rol,ent.RolE >();
             //BD to ent
             CreateMap<ent.RolE, bd.Rol>();
+            //Entidades de inventario
+            CreateMap<bd.Inventario, ent.InventarioE>();
+            //Bd to ent
+            CreateMap<ent.InventarioE, bd.Inventario>();
+            //Entidades de detalle inventario
+            CreateMap<bd.Detalle_inventario, ent.Detalle_InventarioE>();
+            //Bd to ent
+            CreateMap<ent.Detalle_InventarioE, bd.Detalle_inventario>();
+
 
         }
     }

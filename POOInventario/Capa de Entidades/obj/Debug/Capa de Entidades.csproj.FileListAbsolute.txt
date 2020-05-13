@@ -3,3 +3,8 @@ C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa de Entidades\bin\
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.dll
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa de Entidades.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa de Entidades.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.pdb

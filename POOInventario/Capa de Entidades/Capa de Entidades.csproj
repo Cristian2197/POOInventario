@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CargosE.cs" />
+    <Compile Include="Detalle_InventarioE.cs" />
+    <Compile Include="InventarioE.cs" />
     <Compile Include="RolE.cs" />
     <Compile Include="EmpleadosE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
