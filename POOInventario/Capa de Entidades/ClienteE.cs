@@ -17,6 +17,6 @@ namespace Capa_de_Entidades
         public String apellido { get; set; }
         [Display(Name = "Clasificacion")]
         public int ID_clasi { get; set; } 
-        public virtual CategoriasE Categorias { get; set; }
+        public virtual ClasificacionE Clasificacion { get; set; }
     }
 }

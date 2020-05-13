@@ -279,6 +279,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Capa Datos\Capa Datos.csproj">
+      <Project>{9a283363-0e4b-49e2-a5d2-a631b2e9a56d}</Project>
+      <Name>Capa Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Capa de Entidades\Capa de Entidades.csproj">
       <Project>{e795e5e1-68cc-44d1-ac0d-6b812b57527b}</Project>
       <Name>Capa de Entidades</Name>
