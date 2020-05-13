@@ -37,6 +37,31 @@ namespace Dominio
             CreateMap<ent.Detalle_InventarioE, bd.Detalle_inventario>();
 
 
+            //Entidades de la base de datos hasta entidades para clasificación
+            CreateMap<bd.Clasificacion, ent.ClasificacionE>();
+            //Entidades BD clasificación
+            CreateMap<ent.ClasificacionE, bd.Clasificacion>();
+
+            //Entidades de la base de datos hasta entidades para cliente
+            CreateMap<bd.Cliente, ent.ClienteE>();
+            //Entidades BD cliente
+            CreateMap<ent.ClienteE, bd.Cliente>();
+
+            //Entidades de la base de datos hasta entidades para categorias
+            CreateMap<bd.categorias, ent.CategoriasE>();
+            //Entidades BD categorias
+            CreateMap<ent.CategoriasE, bd.categorias>();
+
+            //Entidades de la base de datos hasta entidades para Cargos
+            CreateMap<bd.Cargos, ent.CargosE>();
+            //Entidades BD cargos
+            CreateMap<ent.CargosE, bd.Cargos>();
+
+            //Entidades de la base de datos hasta entidades para Productos
+            CreateMap<bd.Producto, ent.ProductoE>();
+            //Entidades BD Productos
+            CreateMap<ent.ProductoE, bd.Producto>();
+
         }
     }
 }

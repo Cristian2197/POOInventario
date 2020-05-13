@@ -20,6 +20,7 @@ C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\obj\Debug\Ca
 C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\obj\Debug\Capa Datos.csproj.CopyComplete
 C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\obj\Debug\Capa Datos.dll
 C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa Datos\obj\Debug\Capa Datos.pdb
+<<<<<<< HEAD
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.dll.config
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.dll
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.pdb
@@ -31,3 +32,17 @@ C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa D
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.csproj.CopyComplete
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.dll
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.pdb
+=======
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.dll.config
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\bin\Debug\EntityFramework.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\bin\Debug\EntityFramework.xml
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.csproj.CoreCompileInputs.cache
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.csproj.CopyComplete
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.pdb
+>>>>>>> 0d306dda5f770512fefd265d9dcac8bec8c2cf68

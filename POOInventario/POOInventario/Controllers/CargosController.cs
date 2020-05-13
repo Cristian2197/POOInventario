@@ -9,51 +9,51 @@ using dom = Dominio;
 
 namespace POOInventario.Controllers
 {
-    public class RolController : Controller
+    public class CargosController : Controller
     {
-        // GET: Rol
+        // GET: Cargos
         public ActionResult Index()
         {
-            var _roles = new dom.RolD().RolesList();
-            return View(_roles);
+            var _cargos = new dom.CargosD().CargosList();
+            return View(_cargos);
         }
-        //Controlador para CREAR clientes
+        //Controlador para CREAR cargos
         [HttpGet]
         public ActionResult Crear()
         {
-            var _rol = new ent.RolE();
-            return PartialView("Crear", _rol);
+            var _cargo = new ent.CargosE();
+            return PartialView("Crear", _cargo);
         }
         [HttpPost]
-        public ActionResult Crear(ent.RolE rol)
+        public ActionResult Crear(ent.CargosE _cargo)
         {
-            new dom.RolD().CrearRol(rol);
+            new dom.CargosD().CrearCargo(_cargo);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult Editar(int id)
         {
-            var _rol = new dom.RolD().RolesPorID(id);
-            return PartialView("Editar", _rol);
+            var _cargo = new dom.CargosD().CargosPorID(id);
+            return PartialView("Editar", _cargo);
         }
         [HttpPost]
-        public ActionResult Editar(ent.RolE RolEditado)
+        public ActionResult Editar(ent.CargosE CargoEditado)
         {
-            new dom.RolD().ModificarRol(RolEditado);
+            new dom.CargosD().ModificarCargo(CargoEditado);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult Eliminar(int? id)
         {
-            var roles = new dom.RolD().RolesPorID((int)id);
+            var roles = new dom.CargosD().CargosPorID((int)id);
             return PartialView(roles);
         }
         [HttpPost, ActionName("Eliminar")]
         [ValidateAntiForgeryToken]
         public ActionResult EliminarConfirmado(int id)
         {
-            var Rol = new dom.RolD().RolesPorID(id);
-            new dom.RolD().EliminarRol(Rol);
+            var Cargo = new dom.CargosD().CargosPorID(id);
+            new dom.CargosD().EliminarCargo(Cargo);
             return RedirectToAction("Index");
         }
     }

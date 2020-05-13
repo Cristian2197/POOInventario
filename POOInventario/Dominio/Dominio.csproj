@@ -55,9 +55,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Detalle_InventaroD.cs" />
+    <Compile Include="CargosD.cs" />
+    <Compile Include="CategoriasD.cs" />
+    <Compile Include="ClasificacionD.cs" />
+    <Compile Include="ClienteD.cs" />
     <Compile Include="EmpleadosD.cs" />
     <Compile Include="InventarioD.cs" />
     <Compile Include="MapeoBD.cs" />
+    <Compile Include="ProductoD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RolD.cs" />
   </ItemGroup>

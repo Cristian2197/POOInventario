@@ -3,8 +3,22 @@ C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa de Entidades\bin\
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.dll
 C:\Users\crist\OneDrive\Escritorio\POOSTRES\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.pdb
+<<<<<<< HEAD
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa de Entidades.dll
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa de Entidades.pdb
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.dll
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.pdb
+=======
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa de Entidades.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa de Entidades.pdb
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csproj.CoreCompileInputs.cache
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.dll
+C:\Users\linke\Source\Repos\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.pdb
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa de Entidades\bin\Debug\Capa de Entidades.dll
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa de Entidades\bin\Debug\Capa de Entidades.pdb
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.dll
+C:\Users\crist\Source\Repos\POOInventario2\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.pdb
+>>>>>>> 0d306dda5f770512fefd265d9dcac8bec8c2cf68
