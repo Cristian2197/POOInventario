@@ -188,7 +188,6 @@ C:\Users\crist\Source\Repos\POOInventario2\POOInventario\POOInventario\obj\Debug
 C:\Users\crist\Source\Repos\POOInventario2\POOInventario\POOInventario\obj\Debug\POOInventario.csproj.CopyComplete
 C:\Users\crist\Source\Repos\POOInventario2\POOInventario\POOInventario\obj\Debug\POOInventario.dll
 C:\Users\crist\Source\Repos\POOInventario2\POOInventario\POOInventario\obj\Debug\POOInventario.pdb
-<<<<<<< HEAD
 C:\Users\alcid\Documents\POOInventario\POOInventario\POOInventario\bin\POOInventario.dll.config
 C:\Users\alcid\Documents\POOInventario\POOInventario\POOInventario\bin\POOInventario.dll
 C:\Users\alcid\Documents\POOInventario\POOInventario\POOInventario\bin\POOInventario.pdb
@@ -284,7 +283,6 @@ C:\Users\alcid\Documents\POOInventario\POOInventario\POOInventario\obj\Debug\POO
 C:\Users\alcid\Documents\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.csproj.CopyComplete
 C:\Users\alcid\Documents\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.dll
 C:\Users\alcid\Documents\POOInventario\POOInventario\POOInventario\obj\Debug\POOInventario.pdb
-=======
 C:\Users\linke\Source\Repos\POOInventario\POOInventario\POOInventario\bin\POOInventario.dll.config
 C:\Users\linke\Source\Repos\POOInventario\POOInventario\POOInventario\bin\POOInventario.dll
 C:\Users\linke\Source\Repos\POOInventario\POOInventario\POOInventario\bin\POOInventario.pdb
@@ -381,4 +379,3 @@ C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\vbc.rsp
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\VBCSCompiler.exe
 C:\Users\linke\source\repos\POOInventario\POOInventario\POOInventario\bin\roslyn\VBCSCompiler.exe.config
->>>>>>> 0d306dda5f770512fefd265d9dcac8bec8c2cf68

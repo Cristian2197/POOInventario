@@ -227,21 +227,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-<<<<<<< HEAD
-    <Compile Include="Controllers\Detalle_InventarioController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\InventarioController.cs" />
-=======
     <Compile Include="Controllers\CargosController.cs" />
-    <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\ClasificacionController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
->>>>>>> 0d306dda5f770512fefd265d9dcac8bec8c2cf68
     <Compile Include="Controllers\RolController.cs" />
     <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -265,14 +259,12 @@
     <Content Include="Views\Rol\Index.cshtml" />
     <Content Include="Views\Rol\Crear.cshtml" />
     <Content Include="Views\Rol\Editar.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Inventario\Index.cshtml" />
     <Content Include="Views\Inventario\Crear.cshtml" />
     <Content Include="Views\Inventario\Editar.cshtml" />
     <Content Include="Views\Detalle_Inventario\Index.cshtml" />
     <Content Include="Views\Detalle_Inventario\Crear.cshtml" />
     <Content Include="Views\Detalle_Inventario\Editar.cshtml" />
-=======
     <Content Include="Views\Rol\Eliminar.cshtml" />
     <Content Include="Views\Clasificacion\Index.cshtml" />
     <Content Include="Views\Clasificacion\Crear.cshtml" />
@@ -291,7 +283,6 @@
     <Content Include="Views\Productos\Crear.cshtml" />
     <Content Include="Views\Productos\Editar.cshtml" />
     <Content Include="Views\Productos\Eliminar.cshtml" />
->>>>>>> 0d306dda5f770512fefd265d9dcac8bec8c2cf68
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
