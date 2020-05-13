@@ -9,51 +9,51 @@ using dom = Dominio;
 
 namespace POOInventario.Controllers
 {
-    public class CargosController : Controller
+    public class ProductosController : Controller
     {
-        // GET: Cargos
+        // GET: Productos
         public ActionResult Index()
         {
-            var _cargos = new dom.CargosD().CargosList();
-            return View(_cargos);
+            var _productos = new dom.ProductoD().ProductosList();
+            return View(_productos);
         }
         //Controlador para CREAR cargos
         [HttpGet]
         public ActionResult Crear()
         {
-            var _cargo = new ent.CargosE();
-            return PartialView("Crear", _cargo);
+            var _producto = new ent.ProductoE();
+            return PartialView("Crear", _producto);
         }
         [HttpPost]
-        public ActionResult Crear(ent.CargosE _cargo)
+        public ActionResult Crear(ent.ProductoE _producto)
         {
-            new dom.CargosD().CrearCargo(_cargo);
+            new dom.ProductoD().CrearProducto(_producto);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult Editar(int id)
         {
-            var _cargo = new dom.CargosD().CargosPorID(id);
-            return PartialView("Editar", _cargo);
+            var _producto = new dom.ProductoD().ProductosPorID(id);
+            return PartialView("Editar", _producto);
         }
         [HttpPost]
-        public ActionResult Editar(ent.CargosE CargoEditado)
+        public ActionResult Editar(ent.ProductoE ProductoEditado)
         {
-            new dom.CargosD().ModificarCargo(CargoEditado);
+            new dom.ProductoD().ModificarProducto(ProductoEditado);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult Eliminar(int? id)
         {
-            var roles = new dom.CargosD().CargosPorID((int)id);
-            return PartialView(roles);
+            var Producto = new dom.ProductoD().ProductosPorID((int)id);
+            return PartialView(Producto);
         }
         [HttpPost, ActionName("Eliminar")]
         [ValidateAntiForgeryToken]
         public ActionResult EliminarConfirmado(int id)
         {
-            var Cargo = new dom.CargosD().CargosPorID(id);
-            new dom.CargosD().EliminarCargo(Cargo);
+            var Producto = new dom.ProductoD().ProductosPorID(id);
+            new dom.ProductoD().EliminarProducto(Producto);
             return RedirectToAction("Index");
         }
     }

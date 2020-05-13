@@ -232,6 +232,7 @@
     <Compile Include="Controllers\ClasificacionController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\RolController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -272,6 +273,10 @@
     <Content Include="Views\Cargos\Crear.cshtml" />
     <Content Include="Views\Cargos\Editar.cshtml" />
     <Content Include="Views\Cargos\Eliminar.cshtml" />
+    <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\Productos\Crear.cshtml" />
+    <Content Include="Views\Productos\Editar.cshtml" />
+    <Content Include="Views\Productos\Eliminar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
