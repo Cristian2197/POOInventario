@@ -65,5 +65,20 @@ namespace POOInventario.Controllers
             return RedirectToAction("Index");
         }
         
+        [HttpGet]
+        public ActionResult Eliminar(int? id)
+        {
+            var cliente = new dom.ClienteD().ClientesPorID((int)id);
+            return PartialView(cliente);
+        }
+        [HttpPost, ActionName("Eliminar")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EliminarConfirmado(int id)
+        {
+            var Cliente = new dom.ClienteD().ClientesPorID(id);
+            new dom.ClienteD().EliminarCliente(Cliente);
+            return RedirectToAction("Index");
+        }
+
     }
 }

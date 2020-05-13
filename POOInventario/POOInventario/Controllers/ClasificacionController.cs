@@ -44,5 +44,19 @@ namespace POOInventario.Controllers
             new dom.ClasificacionD().ModificarClasificacion(clasificacionEditado);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Eliminar(int? id)
+        {
+            var clasificacion = new dom.ClasificacionD().ClasificacionPorID((int)id);
+            return PartialView(clasificacion);
+        }
+        [HttpPost, ActionName("Eliminar")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EliminarConfirmado(int id)
+        {
+            var Clasificacion = new dom.ClasificacionD().ClasificacionPorID(id);
+            new dom.ClasificacionD().EliminarClasificacion(Clasificacion);
+            return RedirectToAction("Index");
+        }
     }
 }

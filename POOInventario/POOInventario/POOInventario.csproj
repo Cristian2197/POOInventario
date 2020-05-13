@@ -280,6 +280,9 @@
     <Content Include="Views\Productos\Editar.cshtml" />
     <Content Include="Views\Productos\Eliminar.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Categorias\Eliminar.cshtml" />
+    <Content Include="Views\Clasificacion\Eliminar.cshtml" />
+    <Content Include="Views\Cliente\Eliminar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

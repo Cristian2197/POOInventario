@@ -44,5 +44,20 @@ namespace POOInventario.Controllers
             new dom.CategoriasD().ModificarCategoria(categoriaEditado);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult Eliminar(int? id)
+        {
+            var categorias = new dom.CategoriasD().CategoriaPorID((int)id);
+            return PartialView(categorias);
+        }
+        [HttpPost, ActionName("Eliminar")]
+        [ValidateAntiForgeryToken]
+        public ActionResult EliminarConfirmado(int id)
+        {
+            var Categoria = new dom.CategoriasD().CategoriaPorID(id);
+            new dom.CategoriasD().EliminarCategoria(Categoria);
+            return RedirectToAction("Index");
+        }
     }
 }
