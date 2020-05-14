@@ -228,7 +228,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\InventarioController.cs" />
     <Compile Include="Controllers\CargosController.cs" />
     <Compile Include="Controllers\ClasificacionController.cs" />

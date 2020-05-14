@@ -65,3 +65,25 @@ C:\Users\linke\source\repos\POOInventario\POOInventario\Dominio\obj\Debug\Domini
 C:\Users\linke\source\repos\POOInventario\POOInventario\Dominio\obj\Debug\Dominio.csproj.CopyComplete
 C:\Users\linke\source\repos\POOInventario\POOInventario\Dominio\obj\Debug\Dominio.dll
 C:\Users\linke\source\repos\POOInventario\POOInventario\Dominio\obj\Debug\Dominio.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Dominio.dll.config
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Dominio.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Dominio.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\AutoMapper.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Capa Datos.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Capa_de_Entidades.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\EntityFramework.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Repositorio.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Capa Datos.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Capa Datos.dll.config
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Capa_de_Entidades.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Repositorio.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\Repositorio.dll.config
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\AutoMapper.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\AutoMapper.xml
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\EntityFramework.xml
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\obj\Debug\Dominio.csproj.CopyComplete
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\obj\Debug\Dominio.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Dominio\obj\Debug\Dominio.pdb

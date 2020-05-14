@@ -32,3 +32,14 @@ C:\Users\linke\source\repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Cap
 C:\Users\linke\source\repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.csproj.CopyComplete
 C:\Users\linke\source\repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.dll
 C:\Users\linke\source\repos\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.dll.config
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\Capa Datos.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\EntityFramework.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\EntityFramework.xml
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.csproj.CopyComplete
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.dll
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.pdb
+C:\Users\alcid\Documents\POOInventario\POOInventario\Capa Datos\obj\Debug\Capa Datos.csprojAssemblyReference.cache
