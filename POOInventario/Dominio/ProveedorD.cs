@@ -18,8 +18,8 @@ namespace Dominio
         public IEnumerable<ent.ProveedorE> ProveedorList()
         {
             var _consultabd = _repositorio.TraerTodo();
-            var _proveedor = AutoMapper.Mapper.Map<IEnumerable<bd.proveedor>, IEnumerable<ent.ProveedorE>>(_consultabd);
-            return _proveedor;
+            var _proveedores = AutoMapper.Mapper.Map<IEnumerable<bd.proveedor>, IEnumerable<ent.ProveedorE>>(_consultabd);
+            return _proveedores;
         }
         public ent.ProveedorE ProveedorPorID(int id_proveedor)
         {

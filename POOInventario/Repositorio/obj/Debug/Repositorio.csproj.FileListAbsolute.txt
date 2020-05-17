@@ -43,3 +43,14 @@ C:\Users\50370\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Re
 C:\Users\50370\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
 C:\Users\50370\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.dll
 C:\Users\50370\Source\Repos\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.pdb
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\bin\Debug\Repositorio.dll.config
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\bin\Debug\Repositorio.dll
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\obj\Debug\Repositorio.dll
+C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\obj\Debug\Repositorio.pdb

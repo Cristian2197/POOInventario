@@ -235,8 +235,11 @@
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PagosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\TipoDePagoController.cs" />
     <Compile Include="Global.asax.cs">
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -289,6 +292,9 @@
     <Content Include="Views\Categorias\Eliminar.cshtml" />
     <Content Include="Views\Clasificacion\Eliminar.cshtml" />
     <Content Include="Views\Cliente\Eliminar.cshtml" />
+    <Content Include="Views\TipoDePago\Index.cshtml" />
+    <Content Include="Views\Pagos\Index.cshtml" />
+    <Content Include="Views\Proveedor\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
