@@ -12,7 +12,6 @@ namespace Dominio
 {
     public class ClienteD
     {
-
         //Nombre de los entities en el modelo
         private Repositorio<bd.Cliente> _repositorio = new Repositorio<bd.Cliente>(new bd.InventarioPOOEntities());
 
