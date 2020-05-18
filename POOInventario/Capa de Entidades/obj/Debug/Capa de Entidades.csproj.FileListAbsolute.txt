@@ -19,3 +19,8 @@ C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\bin\Debug
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa_de_Entidades.dll
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa_de_Entidades.pdb
 C:\Users\alcid\Documents\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
+C:\Users\50370\Source\Repos\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa_de_Entidades.dll
+C:\Users\50370\Source\Repos\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa_de_Entidades.pdb
+C:\Users\50370\Source\Repos\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
+C:\Users\50370\Source\Repos\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa_de_Entidades.dll
+C:\Users\50370\Source\Repos\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa_de_Entidades.pdb

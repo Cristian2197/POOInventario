@@ -62,6 +62,21 @@ namespace Dominio
             //Entidades BD Productos
             CreateMap<ent.ProductoE, bd.Producto>();
 
+            //Entidades de la base de datos hasta entidades para Pagos
+            CreateMap<bd.Pagos, ent.PagosE>();
+            //Entidades BD Productos
+            CreateMap<ent.PagosE, bd.Pagos>();
+
+            //Entidades de la base de datos hasta entidades para Tipo de pagos
+            CreateMap<bd.Tipo_pago, ent.TipoDePagoE>();
+            //Entidades BD Productos
+            CreateMap<ent.TipoDePagoE, bd.Tipo_pago>();
+
+            //Entidades de la base de datos hasta entidades para Proveedores
+            CreateMap<bd.proveedor, ent.ProveedorE>();
+            //Entidades BD Productos
+            CreateMap<ent.ProveedorE, bd.proveedor>();
+
         }
     }
 }
