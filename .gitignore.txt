@@ -1,0 +1,8 @@
+POOInventario/.vs/POOInventario/config/applicationhost.config
+POOInventario/.vs/POOInventario/v16/.suo
+POOInventario/.vs/POOInventario/v16/Server/sqlite3/storage.ide
+POOInventario/.vs/POOInventario/v16/Server/sqlite3/storage.ide-shm
+POOInventario/.vs/POOInventario/v16/Server/sqlite3/storage.ide-wal
+POOInventario/Capa Datos/obj/Debug/Capa Datos.csprojAssemblyReference.cache
+POOInventario/Dominio/obj/Debug/Dominio.csprojAssemblyReference.cache
+POOInventario/Repositorio/obj/Debug/Repositorio.csprojAssemblyReference.cache
