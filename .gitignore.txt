@@ -1,0 +1,8 @@
+POOInventario/.vs/POOInventario/v16/.suo
+POOInventario/Capa de Entidades/obj/Debug/Capa de Entidades.csprojAssemblyReference.cache
+POOInventario/Dominio/obj/Debug/Dominio.csprojAssemblyReference.cache
+POOInventario/POOInventario/bin/POOInventario.dll
+POOInventario/POOInventario/bin/POOInventario.pdb
+POOInventario/POOInventario/obj/Debug/POOInventario.csprojAssemblyReference.cache
+POOInventario/POOInventario/obj/Debug/POOInventario.dll
+POOInventario/POOInventario/obj/Debug/POOInventario.pdb
