@@ -27,6 +27,15 @@ namespace Dominio
             CreateMap<bd.Rol,ent.RolE >();
             //BD to ent
             CreateMap<ent.RolE, bd.Rol>();
+            //Entidades de inventario
+            CreateMap<bd.Inventario, ent.InventarioE>();
+            //Bd to ent
+            CreateMap<ent.InventarioE, bd.Inventario>();
+            //Entidades de detalle inventario
+            CreateMap<bd.Detalle_inventario, ent.Detalle_InventarioE>();
+            //Bd to ent
+            CreateMap<ent.Detalle_InventarioE, bd.Detalle_inventario>();
+
 
             //Entidades de la base de datos hasta entidades para clasificación
             CreateMap<bd.Clasificacion, ent.ClasificacionE>();
@@ -52,6 +61,21 @@ namespace Dominio
             CreateMap<bd.Producto, ent.ProductoE>();
             //Entidades BD Productos
             CreateMap<ent.ProductoE, bd.Producto>();
+
+            //Entidades de la base de datos hasta entidades para Pagos
+            CreateMap<bd.Pagos, ent.PagosE>();
+            //Entidades BD Productos
+            CreateMap<ent.PagosE, bd.Pagos>();
+
+            //Entidades de la base de datos hasta entidades para Tipo de pagos
+            CreateMap<bd.Tipo_pago, ent.TipoDePagoE>();
+            //Entidades BD Productos
+            CreateMap<ent.TipoDePagoE, bd.Tipo_pago>();
+
+            //Entidades de la base de datos hasta entidades para Proveedores
+            CreateMap<bd.proveedor, ent.ProveedorE>();
+            //Entidades BD Productos
+            CreateMap<ent.ProveedorE, bd.proveedor>();
 
         }
     }

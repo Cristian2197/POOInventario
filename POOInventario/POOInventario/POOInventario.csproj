@@ -122,6 +122,8 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\css\adminlte.min.css" />
+    <Content Include="Scripts\css\all.css" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -146,6 +148,10 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\adminlte.min.js" />
+    <Content Include="Scripts\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\js\demo.js" />
+    <Content Include="Scripts\js\jquery.min.js" />
     <Content Include="Scripts\LogIn\LogIn.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\popper-utils.js" />
@@ -228,16 +234,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\InventarioController.cs" />
+    <Compile Include="Controllers\Detalle_InventarioController.cs" />
     <Compile Include="Controllers\CargosController.cs" />
-    <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\ClasificacionController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PagosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\TipoDePagoController.cs" />
     <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -261,6 +270,12 @@
     <Content Include="Views\Rol\Index.cshtml" />
     <Content Include="Views\Rol\Crear.cshtml" />
     <Content Include="Views\Rol\Editar.cshtml" />
+    <Content Include="Views\Inventario\Index.cshtml" />
+    <Content Include="Views\Inventario\Crear.cshtml" />
+    <Content Include="Views\Inventario\Editar.cshtml" />
+    <Content Include="Views\Detalle_Inventario\Index.cshtml" />
+    <Content Include="Views\Detalle_Inventario\Crear.cshtml" />
+    <Content Include="Views\Detalle_Inventario\Editar.cshtml" />
     <Content Include="Views\Rol\Eliminar.cshtml" />
     <Content Include="Views\Clasificacion\Index.cshtml" />
     <Content Include="Views\Clasificacion\Crear.cshtml" />
@@ -283,6 +298,14 @@
     <Content Include="Views\Categorias\Eliminar.cshtml" />
     <Content Include="Views\Clasificacion\Eliminar.cshtml" />
     <Content Include="Views\Cliente\Eliminar.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Scripts\js\adminlte.min.js.map" />
+    <Content Include="Scripts\js\bootstrap.bundle.js.map" />
+=======
+    <Content Include="Views\TipoDePago\Index.cshtml" />
+    <Content Include="Views\Pagos\Index.cshtml" />
+    <Content Include="Views\Proveedor\Index.cshtml" />
+>>>>>>> f882cfeb9da570a9805ae08a1f68738dacfbcd82
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

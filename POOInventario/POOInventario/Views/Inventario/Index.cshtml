@@ -1,0 +1,140 @@
+﻿@model IEnumerable<Capa_de_Entidades.InventarioE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<!-- Button trigger modal -->
+<button id="btnCrearInventario" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalCrear">
+    Añadir Empleado
+</button>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_inventario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_inventario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_movimiento)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_inventario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_producto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecha_inventario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipo_movimiento)
+            </td>
+            <td>
+                <a href="#" class="btn btn-danger Editar" id="@item.id_inventario" name="@item.id_inventario" data-toggle="modal" data-target="#ModalEditar">Editar</a>
+            </td>
+        </tr>
+    }
+
+</table>
+<!-- Modal Crear Usuario-->
+<div class="modal fade" id="ModalCrear" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="dvCrearInventario"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Modificar-->
+<div class="modal fade" id="ModalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="dvModificarInventario"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnCrearInventario").click(function () {
+                var _url = 'Crear';
+                $.ajax({
+                    type: "Get",
+                    url: _url,
+                    data: {},
+                    async: false,
+                    success: function (response) {
+                        console.log("con exito");
+                        console.log(response);
+                        $('#dvCrearInventario').html(response);
+                    },
+                    error: function (response) {
+                        if (response.responseText != "") {
+                            alert(response.responseText);
+                        }
+                    }
+                });
+            });
+
+            $(".Editar").on("click", function () {
+                var clienteId = $(this).attr("id");
+                var _url = 'Editar/' + clienteId;
+                $.ajax({
+                    type: "Get",
+                    url: _url,
+                    data: {},
+                    async: false,
+                    success: function (response) {
+                        $('#dvModificarInventario').html(response);
+                    },
+                    error: function (response) {
+                        if (response.responseText != "") {
+                            alert(response.responseText);
+                        }
+                    }
+                });
+            });
+        });
+
+    </script>
+}
