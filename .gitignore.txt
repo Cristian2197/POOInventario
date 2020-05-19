@@ -1,0 +1,8 @@
+.suo
+Capa de Entidades.csprojAssemblyReference.cache
+Dominio.csprojAssemblyReference.cache
+POOInventario.dll
+POOInventario.pdb
+POOInventario.csprojAssemblyReference.cache
+POOInventario.dll
+POOInventario.pdb
