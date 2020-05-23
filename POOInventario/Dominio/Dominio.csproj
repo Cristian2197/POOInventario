@@ -55,11 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CotizacionD.cs" />
+    <Compile Include="DetalleFacturaD.cs" />
+    <Compile Include="Detalle_cotizacionD.cs" />
     <Compile Include="Detalle_InventaroD.cs" />
     <Compile Include="CargosD.cs" />
     <Compile Include="CategoriasD.cs" />
     <Compile Include="ClasificacionD.cs" />
     <Compile Include="ClienteD.cs" />
+    <Compile Include="FacturasD.cs" />
     <Compile Include="PagosD.cs" />
     <Compile Include="ProveedorD.cs" />
     <Compile Include="TipoDePagoD.cs" />

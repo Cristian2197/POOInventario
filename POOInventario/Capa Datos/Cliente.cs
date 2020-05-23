@@ -24,6 +24,7 @@ namespace Capa_Datos
         public string nombre { get; set; }
         public string apellido { get; set; }
         public Nullable<int> ID_clasi { get; set; }
+        public string numero_tarjeta { get; set; }
     
         public virtual Clasificacion Clasificacion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -10,6 +10,7 @@ namespace Capa_de_Entidades
     {
         public int id_detalle_inventario { get; set; }
         public int id_invetario { get; set; }
+        public int id_producto { get; set; }
         public int cantidad { get; set; }
         public float precio { get; set; }
         public int saldo_unidades { get; set; }

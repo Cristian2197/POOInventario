@@ -49,5 +49,50 @@ namespace POOInventario.Controllers
            
             
         }
+
+        // GET: Login
+        [HttpGet]
+        public ActionResult LoginCli(int? c)
+        {
+            if (c != null)
+            {
+                return View();
+
+            }
+            return PartialView();
+        }
+        [HttpPost]
+        public ActionResult AutorizarCli(ent.ClienteE clientes)
+        {
+            using (db.InventarioPOOEntities datos = new db.InventarioPOOEntities())
+            {
+                var clientedetalle = datos.Cliente.Where(e => e.nombre.Equals(clientes.nombre) && e.numero_tarjeta.Equals(clientes.numero_tarjeta)).FirstOrDefault();
+                if (clientedetalle == null)
+                {
+                    clientes.MensajeError = "Usuario o Contraseña Incorrectos";
+                    return View("LoginCli", clientes);
+                }
+                else
+                {
+                    Session["sesionCli"] = "Activa";
+                    Session["id_cli"] = clientedetalle.id_cli;
+                    Session["nombre"] = clientedetalle.nombre;
+                    Session["apellido"] = clientedetalle.apellido;
+                    Session["ID_clasi"] = clientedetalle.ID_clasi;
+                    Session["numero_tarjeta"] = clientedetalle.numero_tarjeta;
+                    return RedirectToAction("Index", "Empleados");
+
+                }
+            }
+
+
+        }
+        public ActionResult LogOut()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index","Empleados");
+        }
+
+
     }
 }

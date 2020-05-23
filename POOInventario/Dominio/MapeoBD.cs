@@ -76,7 +76,12 @@ namespace Dominio
             CreateMap<bd.proveedor, ent.ProveedorE>();
             //Entidades BD Productos
             CreateMap<ent.ProveedorE, bd.proveedor>();
+            CreateMap<bd.Detalle_cotizacion, ent.Detalle_cotizacion>();
+            
+            CreateMap<ent.Detalle_cotizacion, bd.Detalle_cotizacion>();
+            CreateMap<bd.Cotizacion, ent.CotizacionE>();
 
+            CreateMap<ent.CotizacionE, bd.Cotizacion>();
         }
     }
 }

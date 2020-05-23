@@ -70,11 +70,24 @@
             </td>
             <td>
                 <a href="#" class="btn btn-warning Editar" id="@item.id_producto" name="@item.id_producto" data-toggle="modal" data-target="#ModalEditar">Editar</a>
+
+
+            </td>
+            <td>
                 <button id="@item.id_producto" type="button" class="btn btn-danger btnEliminarRol" data-toggle="modal" data-target="#ModalEliminar">
                     Eliminar
                 </button>
             </td>
+            <td>
+                <button id="@item.id_producto" type="button" class="btn btn-dark btnComprar" data-toggle="modal" data-target="#ModalComprar">
+                    Comprar
+                </button>
+            </td>
+
         </tr>
+
+
+
     }
 
 </table>
@@ -124,6 +137,23 @@
             <div class="modal-body">
                 <div id="dvEliminarProducto"></div>
             </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Comprar-->
+<div class="modal fade" id="ModalComprar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Comprar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="dvComprar"></div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -186,6 +216,26 @@
                             }
                         }
                     });
+                });
+            });
+        });
+         $(document).ready(function () {
+             $(".btnComprar").click(function () {
+                var id= $(this).attr("id");
+                var _url = '/Productos/Comprar/'+id;
+                $.ajax({
+                    type: "Get",
+                    url: _url,
+                    data: {},
+                    async: false,
+                    success: function (response) {
+                        $('#dvComprar').html(response);
+                    },
+                    error: function (response) {
+                        if (response.responseText != "") {
+                            alert(response.responseText);
+                        }
+                    }
                 });
             });
         });

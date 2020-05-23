@@ -23,6 +23,5 @@ namespace Capa_Datos
         public Nullable<int> id_tipo_pago { get; set; }
     
         public virtual Facturas Facturas { get; set; }
-        public virtual Tipo_pago Tipo_pago { get; set; }
     }
 }

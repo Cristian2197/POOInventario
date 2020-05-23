@@ -28,10 +28,12 @@ namespace Capa_Datos
         public string tipo { get; set; }
         public Nullable<bool> credito { get; set; }
         public Nullable<int> id_proveedor { get; set; }
+        public Nullable<int> id_tipo_pago { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detalle_Factura> Detalle_Factura { get; set; }
         public virtual proveedor proveedor { get; set; }
+        public virtual Tipo_pago Tipo_pago { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pagos> Pagos { get; set; }
     }

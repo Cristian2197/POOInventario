@@ -17,14 +17,14 @@ namespace Capa_Datos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tipo_pago()
         {
-            this.Detalle_Factura = new HashSet<Detalle_Factura>();
+            this.Facturas = new HashSet<Facturas>();
         }
     
         public int id_tipo_pago { get; set; }
-        public byte[] nombre { get; set; }
+        public string nombre { get; set; }
         public Nullable<decimal> interes { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Detalle_Factura> Detalle_Factura { get; set; }
+        public virtual ICollection<Facturas> Facturas { get; set; }
     }
 }

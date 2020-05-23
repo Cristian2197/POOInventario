@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Capa_de_Entidades.ProductoE>
+
+@{
+    ViewBag.Title = "CompraProducto";
+}
+
+<h2>CompraProducto</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_proveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio_compra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio_venta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.can_existente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_lote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_categoria)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_proveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio_compra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio_venta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.can_existente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_lote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_categoria)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

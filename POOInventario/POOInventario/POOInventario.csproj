@@ -147,6 +147,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\LogIn\LogIn.js" />
+    <Content Include="Scripts\LogIn\LogInCli.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -228,6 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FacturasController.cs" />
     <Compile Include="Controllers\InventarioController.cs" />
     <Compile Include="Controllers\Detalle_InventarioController.cs" />
     <Compile Include="Controllers\CargosController.cs" />
@@ -295,6 +297,14 @@
     <Content Include="Views\TipoDePago\Index.cshtml" />
     <Content Include="Views\Pagos\Index.cshtml" />
     <Content Include="Views\Proveedor\Index.cshtml" />
+    <Content Include="Views\Productos\Comprar.cshtml" />
+    <Content Include="Views\Productos\Confirmarcion.cshtml" />
+    <Content Include="Views\Facturas\FinCompra.cshtml" />
+    <Content Include="Views\Productos\CompraProducto.cshtml" />
+    <Content Include="Views\Login\LoginCli.cshtml" />
+    <Content Include="Views\Productos\Cotizaciones.cshtml" />
+    <Content Include="Views\Productos\IndexCliente.cshtml" />
+    <Content Include="Views\Productos\Detalle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

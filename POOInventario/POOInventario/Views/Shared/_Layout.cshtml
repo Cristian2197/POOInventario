@@ -41,18 +41,100 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                @if (Session["sesionRol"] == null)
+                @if (Session["sesionRol"] == null && Session["sesionCli"] == null)
                 {
-                <a  id="btnLogin" class="btn btn-primary" data-toggle="modal" href="#ModalLogin">
-                    Iniciar sesion
-                </a>
+                    <!-- Split dropleft button -->
+                    <div class="btn-group">
+                        <div class="btn-group dropleft" role="group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropleft</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <!-- Dropdown menu links -->
+                                <a id="btnLoginCli" class="dropdown-item" data-toggle="modal" href="#ModalLoginCli">Cliente</a>
+                                <a id="btnLogin" class="dropdown-item" data-toggle="modal" href="#ModalLogin">Empleados</a>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary">
+                            Iniciar sesion
+                        </button>
+                    </div>
 
                 }
-                else
+                else if (Session["sesionRol"] != null)
                 {
-                <a  id="btnLogin" class="btn btn-primary" data-toggle="modal" href="#ModalLogin">
-                    @Session["Usuario"].ToString()
-                </a>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle btn btn-default btn-md" style="background-color:#6A0110 !important; color:#FFEEDE !important;" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                                <strong class="nav-item active"> @Session["Usuario"].ToString()</strong>
+                            </a>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="btn-group-vertical btn-block">
+                                            <!--Aqui pondras los botones que quieres-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="@Url.Action("LogOut","Login")" class="btn btn-danger btn-sm btn-block">
+                                            Cerrar Sesion
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+                    @*<a id="btnLogin" class="btn btn-primary" data-toggle="modal" href="#ModalLogin">
+                @Session["Usuario"].ToString()
+            </a>*@
+                }
+                else if (Session["sesionCli"] != null)
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle btn btn-default btn-md" style="background-color:#6A0110 !important; color:#FFEEDE !important;" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                                <strong class="nav-item active"> @Session["nombre"].ToString()</strong>
+                            </a>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="btn-group-vertical btn-block">
+                                            <!--Aqui pondras los botones que quieres-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="@Url.Action("LogOut","Login")" class="btn btn-danger btn-sm btn-block">
+                                            Cerrar Sesion
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    @*<a id="btnLoginCli" class="btn btn-primary" data-toggle="modal" href="#ModalLoginCli">
+                        @Session["nombre"].ToString()
+                    </a>*@
                 }
             </form>
         </div>
@@ -74,6 +156,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/LogIn/LogIn.js"></script>
+    <script src="~/Scripts/LogIn/LogInCli.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
@@ -88,6 +171,23 @@
             </div>
             <div class="modal-body">
                 <div id="dvLogin"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalLoginCli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="dvLoginCli"></div>
             </div>
 
         </div>

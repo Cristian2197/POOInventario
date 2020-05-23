@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Capa_de_Entidades.CotizacionE>
+
+@{
+    ViewBag.Title = "Cotizaciones";
+    Capa_de_Entidades.ClienteE cliente =  ViewBag.Cliente;
+}
+
+<h2>Cotizaciones</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            N° de cotización
+        </th>
+        <th>
+            Cliente
+        </th>
+        <th>
+            Fecha
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_cotizacion)
+        </td>
+        <td>
+            @cliente.nombre @cliente.apellido
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_cotizacion)
+        </td>
+        <td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-danger">Eliminar</button>
+                <button type="button" class="btn btn-info">Editar</button>
+                <button type="button" class="btn btn-success">Comprar</button>
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

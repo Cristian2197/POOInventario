@@ -29,6 +29,7 @@
     <Property Name="nombre" Type="varchar" MaxLength="100" />
     <Property Name="apellido" Type="varchar" MaxLength="100" />
     <Property Name="ID_clasi" Type="int" />
+    <Property Name="numero_tarjeta" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Cotizacion">
     <Key>
@@ -100,6 +101,7 @@
     <Property Name="tipo" Type="varchar" MaxLength="100" />
     <Property Name="credito" Type="bit" />
     <Property Name="id_proveedor" Type="int" />
+    <Property Name="id_tipo_pago" Type="int" />
   </EntityType>
   <EntityType Name="Inventario">
     <Key>
@@ -151,22 +153,12 @@
     <Property Name="Usuario" Type="varchar" MaxLength="100" />
     <Property Name="Contraseña" Type="varchar" MaxLength="100" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="Tipo_pago">
     <Key>
       <PropertyRef Name="id_tipo_pago" />
     </Key>
     <Property Name="id_tipo_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nombre" Type="varbinary" MaxLength="50" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
     <Property Name="interes" Type="decimal" Precision="18" Scale="0" />
   </EntityType>
   <Association Name="FK_Cliente_Clasificacion">
@@ -241,18 +233,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Detalle_Factura_Tipo_pago">
-    <End Role="Tipo_pago" Type="Self.Tipo_pago" Multiplicity="0..1" />
-    <End Role="Detalle_Factura" Type="Self.Detalle_Factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Tipo_pago">
-        <PropertyRef Name="id_tipo_pago" />
-      </Principal>
-      <Dependent Role="Detalle_Factura">
-        <PropertyRef Name="id_tipo_pago" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Detalle_inventario_Inventario">
     <End Role="Inventario" Type="Self.Inventario" Multiplicity="0..1" />
     <End Role="Detalle_inventario" Type="Self.Detalle_inventario" Multiplicity="*" />
@@ -298,6 +278,18 @@
       </Principal>
       <Dependent Role="Facturas">
         <PropertyRef Name="id_proveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturas_Tipo_pago">
+    <End Role="Tipo_pago" Type="Self.Tipo_pago" Multiplicity="0..1" />
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_pago">
+        <PropertyRef Name="id_tipo_pago" />
+      </Principal>
+      <Dependent Role="Facturas">
+        <PropertyRef Name="id_tipo_pago" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -365,7 +357,6 @@
     <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="proveedor" EntityType="Self.proveedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tipo_pago" EntityType="Self.Tipo_pago" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Cliente_Clasificacion" Association="Self.FK_Cliente_Clasificacion">
       <End Role="Clasificacion" EntitySet="Clasificacion" />
@@ -391,10 +382,6 @@
       <End Role="Facturas" EntitySet="Facturas" />
       <End Role="Detalle_Factura" EntitySet="Detalle_Factura" />
     </AssociationSet>
-    <AssociationSet Name="FK_Detalle_Factura_Tipo_pago" Association="Self.FK_Detalle_Factura_Tipo_pago">
-      <End Role="Tipo_pago" EntitySet="Tipo_pago" />
-      <End Role="Detalle_Factura" EntitySet="Detalle_Factura" />
-    </AssociationSet>
     <AssociationSet Name="FK_Detalle_inventario_Inventario" Association="Self.FK_Detalle_inventario_Inventario">
       <End Role="Inventario" EntitySet="Inventario" />
       <End Role="Detalle_inventario" EntitySet="Detalle_inventario" />
@@ -409,6 +396,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_Facturas_proveedor" Association="Self.FK_Facturas_proveedor">
       <End Role="proveedor" EntitySet="proveedor" />
+      <End Role="Facturas" EntitySet="Facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturas_Tipo_pago" Association="Self.FK_Facturas_Tipo_pago">
+      <End Role="Tipo_pago" EntitySet="Tipo_pago" />
       <End Role="Facturas" EntitySet="Facturas" />
     </AssociationSet>
     <AssociationSet Name="FK_Pagos_Facturas" Association="Self.FK_Pagos_Facturas">

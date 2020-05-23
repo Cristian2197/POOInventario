@@ -16,7 +16,9 @@ namespace Capa_de_Entidades
         [Display(Name = "Apellido")]
         public String apellido { get; set; }
         [Display(Name = "Clasificacion")]
-        public int ID_clasi { get; set; } 
+        public int ID_clasi { get; set; }
+        public string numero_tarjeta { get; set; }
+        public string MensajeError { get; set; }
         public virtual ClasificacionE Clasificacion { get; set; }
     }
 }

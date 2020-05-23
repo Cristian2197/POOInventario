@@ -1,0 +1,27 @@
+﻿@model Capa_de_Entidades.ClienteE
+
+@{
+    ViewBag.Title = "Confirmarcion";
+    string estado = (string)ViewBag.Credito;
+    Capa_de_Entidades.FacturaE factura = ViewBag.Factura;
+}
+
+<h2>Confirmarcion</h2>
+@if (estado == "OK")
+{
+    <div class="alert alert-primary" role="alert">
+        Si aplica para credito
+    </div>
+
+}
+else
+{
+    <div class="alert alert-secondary" role="alert">
+       No aplica para credito
+    </div>
+}
+<br />
+<br />
+<a href="@Url.Action("FinCompra", "Facturas", factura)" class="btn btn-info">Continuar con la compra</a>
+
+

@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Capa_de_Entidades.ProductoE>
+
+@{
+    ViewBag.Title = "IndexCliente";
+    List<Capa_de_Entidades.Detalle_cotizacion> carrito = ViewBag.Carrito;
+    List<Capa_de_Entidades.ProductoE> productos = ViewBag.Productos;
+    int cotizacion = ViewBag.cotizacion;
+}
+
+<h2>IndexCliente</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="row">
+    <div class="col-md-9">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.nombre</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">No.Producto: @item.id_producto</h6>
+                        <p class="card-text">Proveedor es : @item.id_proveedor</p>
+                        <p class="card-text">Lote  : @item.num_lote</p>
+                        <p class="card-text">Precio de venta : @item.precio_venta</p>
+                        <p class="card-text">Precio de compra : @item.precio_compra</p>
+                        <p class="card-text">Categoria : @item.id_categoria</p>
+
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button class="btn btn-success btnComprar" id="@item.id_producto" name="@item.id_producto" data-toggle="modal" data-target="#ModalComprar">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Coización</h5>
+                <ul class="list-group">
+                    @if (carrito.Count() > 0)
+                    {
+                        foreach (var item in carrito)
+                        {
+                            foreach (var item2 in productos)
+                            {
+                                if (item2.id_producto == item.id_producto)
+                                {
+                                    <li class="list-group-item">(@item.cantidad)@item2.nombre <p align="right">@item.total</p></li>
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <li class="list-group-item">No hay nada por aquí</li>
+                    }
+                </ul>
+                <a href="#" class="btn btn-info">Guardar</a>
+                <a href="~/Productos/Comprar/@cotizacion" class="btn btn-danger">Comprar</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    
+</div>
+
+<div class="modal fade" id="ModalComprar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="dvDetalleClientes"></div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script>
+         $(document).ready(function () {
+            $(".btnComprar").on("click", function () {
+                var clienteId = $(this).attr("id");
+                var _url = '/Productos/Detalle/' + clienteId;
+                $.ajax({
+                    type: "Get",
+                    url: _url,
+                    data: {},
+                    async: false,
+                    success: function (response) {
+                        $('#dvDetalleClientes').html(response);
+                    },
+                    error: function (response) {
+                        if (response.responseText != "") {
+                            alert(response.responseText);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}
