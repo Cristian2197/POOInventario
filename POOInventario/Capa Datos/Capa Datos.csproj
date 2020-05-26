@@ -126,9 +126,6 @@
     <Compile Include="Rol.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Tipo_pago.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

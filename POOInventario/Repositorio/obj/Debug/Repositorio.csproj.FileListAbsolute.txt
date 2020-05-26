@@ -39,7 +39,7 @@ C:\Users\crist\Source\Repos\POOInventario3\POOInventario\Repositorio\bin\Debug\E
 C:\Users\crist\Source\Repos\POOInventario3\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\crist\Source\Repos\POOInventario3\POOInventario\Repositorio\bin\Debug\EntityFramework.xml
 C:\Users\crist\Source\Repos\POOInventario3\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\crist\Source\Repos\POOInventario3\POOInventario\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache
 C:\Users\crist\Source\Repos\POOInventario3\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
 C:\Users\crist\Source\Repos\POOInventario3\POOInventario\Repositorio\obj\Debug\Repositorio.dll
 C:\Users\crist\Source\Repos\POOInventario3\POOInventario\Repositorio\obj\Debug\Repositorio.pdb
+C:\Users\crist\source\repos\POOInventario3\POOInventario\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache

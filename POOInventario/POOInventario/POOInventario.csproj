@@ -295,6 +295,7 @@
     <Content Include="Views\TipoDePago\Index.cshtml" />
     <Content Include="Views\Pagos\Index.cshtml" />
     <Content Include="Views\Proveedor\Index.cshtml" />
+    <Content Include="Views\Productos\ComprobarCredito.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

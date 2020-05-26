@@ -15,7 +15,59 @@ namespace POOInventario.Controllers
         public ActionResult Index()
         {
             var _productos = new dom.ProductoD().ProductosList();
+           
             return View(_productos);
+            
+        }
+        [HttpGet]
+        public ActionResult CompraProducto(ent.DetalleFacturaE detalle)
+        {
+            if (detalle.credito == true)
+            {
+                ViewBag.Credito = "Aplica";
+            }
+            else
+            {
+                ViewBag.Credito = "No Aplica";
+            }
+           
+            return View(detalle);
+        }
+      
+       [HttpPost]
+       public ActionResult CompraProducto(ent.DetalleFacturaE detalle, string num_tarjeta)
+        {
+            int idProd = (int)TempData["IDProducto"];
+            
+            return null;
+        }
+
+        [HttpGet]
+        public ActionResult ComprobarCredito(int idproducto)
+        {
+            TempData["Idprod"] = idproducto;
+            var cliente = new ent.ClienteE();
+            return PartialView(cliente);
+        }
+        [HttpPost]
+        public ActionResult ComporbarCredito(string numTarjeta)
+        {
+            var cliente = new dom.ClienteD().BuscarUnCliente(x => x.numero_tarjeta == numTarjeta);
+            var detalle = new ent.DetalleFacturaE();
+            if (cliente.ID_clasi == 1)
+            {
+                detalle.credito = false;
+            }
+            else if (cliente.ID_clasi == 2)
+            {
+                detalle.credito = true;
+            }
+            else if (cliente.ID_clasi == 3)
+            {
+                detalle.credito = true;
+            }
+            detalle.id_producto = (int)TempData["Idprod"];
+            return RedirectToAction("CompraProducto" , detalle);
         }
         //Controlador para CREAR cargos
         [HttpGet]

@@ -13,7 +13,7 @@ namespace Capa_de_Entidades
         public int id_pago { get; set; }
         [Display(Name = "ID de Factura")]
         public String id_factura { get; set; }
-        public virtual FacturaF Factura { get; set; }
+        public virtual FacturaE Factura { get; set; }
         [Display(Name = "Monto")]
         public String monto { get; set; }
         [Display(Name = "Cuota")]

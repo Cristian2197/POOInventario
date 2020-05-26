@@ -40,7 +40,6 @@ namespace Capa_Datos
         public virtual DbSet<Producto> Producto { get; set; }
         public virtual DbSet<proveedor> proveedor { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tipo_pago> Tipo_pago { get; set; }
     }
 }

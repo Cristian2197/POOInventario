@@ -29,6 +29,7 @@
     <Property Name="nombre" Type="varchar" MaxLength="100" />
     <Property Name="apellido" Type="varchar" MaxLength="100" />
     <Property Name="ID_clasi" Type="int" />
+    <Property Name="numero_tarjeta" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Cotizacion">
     <Key>
@@ -150,16 +151,6 @@
     <Property Name="id_rol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Usuario" Type="varchar" MaxLength="100" />
     <Property Name="Contraseña" Type="varchar" MaxLength="100" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Tipo_pago">
     <Key>
@@ -365,7 +356,6 @@
     <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="proveedor" EntityType="Self.proveedor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tipo_pago" EntityType="Self.Tipo_pago" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Cliente_Clasificacion" Association="Self.FK_Cliente_Clasificacion">
       <End Role="Clasificacion" EntitySet="Clasificacion" />

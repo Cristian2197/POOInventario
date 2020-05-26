@@ -44,8 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CargosE.cs" />
+    <Compile Include="DetalleFacturaE.cs" />
     <Compile Include="Detalle_InventarioE.cs" />
-    <Compile Include="FacturaF.cs" />
+    <Compile Include="FacturaE.cs" />
     <Compile Include="InventarioE.cs" />
     <Compile Include="CategoriasE.cs" />
     <Compile Include="ClasificacionE.cs" />
