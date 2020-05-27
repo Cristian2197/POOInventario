@@ -44,5 +44,20 @@ namespace POOInventario.Controllers
             new dom.PagosD().ModificarPago(pagoEditado);
             return RedirectToAction("Index");
         }
+
+        public ActionResult PagarPago(int id)
+        {
+            var pago = new dom.PagosD().PagosPorID(id);
+            var pago2 = pago;
+            pago.activo = false;
+            new dom.PagosD().ModificarPago(pago);
+            if (pago2.couta != 0)
+            {
+                pago2.couta = pago2.couta - 1;
+                pago2.fecha_pago = DateTime.Now.AddMonths(1);
+                new dom.PagosD().CrearPago(pago2);
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

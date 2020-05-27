@@ -29,8 +29,18 @@ namespace Dominio
         }
         public void FacturaCrear(ent.FacturaE _clienteCrear)
         {
-            var adiconarCliente = AutoMapper.Mapper.Map<ent.FacturaE, bd.Facturas>(_clienteCrear);
-            _repositorio.Adicionar(adiconarCliente);
+            //var adiconarCliente = AutoMapper.Mapper.Map<ent.FacturaE, bd.Facturas>(_clienteCrear);
+            var factura = new bd.Facturas();
+            factura.credito = _clienteCrear.credito;
+            factura.id_cli = _clienteCrear.id_cli;
+            factura.id_factura = _clienteCrear.id_factura;
+            factura.num_cotizacion = _clienteCrear.num_cotizacion;
+            factura.id_tipo_pago = _clienteCrear.id_tipo_pago;
+            factura.total =(decimal)_clienteCrear.total;
+            factura.fecha_venta = _clienteCrear.fecha_venta;
+            
+
+            _repositorio.Adicionar(factura);
             _repositorio.Grabar();
 
         }

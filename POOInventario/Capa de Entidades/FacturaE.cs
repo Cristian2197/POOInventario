@@ -23,7 +23,8 @@ namespace Capa_de_Entidades
         [Display(Name = "Credito")]
         public Boolean credito { get; set; }
         [Display(Name = "ID del Proveedor")]
-        public int id_proveedor { get; set; }
+        public Nullable<int> id_proveedor { get; set; }
+        public float total { get; set; }
         public virtual ProveedorE Proveedor { get; set; }
         public int id_tipo_pago { get; set; }
         public List<DetalleFacturaE> Detalle { get; set; }

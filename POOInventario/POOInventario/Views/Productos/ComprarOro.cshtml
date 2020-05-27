@@ -1,0 +1,51 @@
+﻿@model Capa_de_Entidades.ProductoE
+
+@{
+    List<SelectListItem> tiempoList = ViewBag.Meses;
+    List<SelectListItem> tiposList = ViewBag.Tipos;
+}
+
+@using (Html.BeginForm("ComprarOro", "Productos", FormMethod.Post))
+{
+
+    <div id="dvDetalleClientes">
+        <form action="/Productos/Detalle/" method="post">
+            <div>
+                <input type="number" value="@Model.id_producto" name="id" max="@Model.id_producto" min="@Model.id_producto" />
+                <h4>Producto: @Model.nombre</h4>
+                <hr />
+                <div class="form-group">
+                    Tipo de pago:
+                    <div class="col-md-10">
+                        @Html.DropDownList("tipo", tiposList, null, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    Meses:
+                    <div class="col-md-10">
+                        @Html.DropDownList("meses", tiempoList, null, new { @class = "form-control" })
+                    </div>
+                </div>
+                <dl class="dl-horizontal">
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.precio_venta)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.precio_venta)
+                    </dd>
+
+                </dl>
+
+            </div>
+            <p>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="submit" class="btn btn-info">Continuar compra</button>
+                </div>
+            </p>
+        </form>
+    </div>
+
+}

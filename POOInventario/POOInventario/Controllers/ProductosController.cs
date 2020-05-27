@@ -12,6 +12,17 @@ namespace POOInventario.Controllers
 
     public class ProductosController : Controller
     {
+        public List<SelectListItem> tipos()
+        {
+            var tipos = new dom.TipoDePagoD().TDPList();
+            List<SelectListItem> tiposD = new List<SelectListItem>();
+            tiposD.Add(new SelectListItem { Value = "0", Text = "--Seleccione tipo de pago--" });
+            foreach (var item in tipos)
+            {
+                tiposD.Add(new SelectListItem { Value = item.id_tipo_pago.ToString(), Text = item.nombre });
+            }
+            return tiposD;
+        }
         public List<ent.ProductoE> productosDisponibles()
         {
             List<ent.ProductoE> productoss = new List<ent.ProductoE>();
@@ -130,7 +141,7 @@ namespace POOInventario.Controllers
         public ActionResult IndexCliente()
         {
             
-            string tarjeta = Session["numero_tarjeta"].ToString();
+          string tarjeta = Session["numero_tarjeta"].ToString();
             var cliente = new dom.ClienteD().BuscarUnCliente(x => x.numero_tarjeta == tarjeta);
             var cotizacion = new ent.CotizacionE();
             if (new dom.CotizacionD().BuscarCotizacion(x => x.id_cli == cliente.id_cli).ToList().Count() != 0)
@@ -138,7 +149,16 @@ namespace POOInventario.Controllers
                 cotizacion = new dom.CotizacionD().BuscarCotizacion(x => x.id_cli == cliente.id_cli).ToList().Last();
             }
             var producto = new dom.ProductoD().BuscarProducto(x => x.can_existente > 0);
-            ViewBag.Carrito = DetallexCot(cotizacion);
+            if (ValidarCotiFactu(cliente.id_cli) == true)
+            {
+                ViewBag.EstadoCarrito = 1;
+                ViewBag.Carrito = DetallexCot(cotizacion);
+            }
+            else
+            {
+                ViewBag.EstadoCarrito = 0;
+                ViewBag.Carrito = DetallexCot(cotizacion);
+            }
             ViewBag.Productos = producto;
             ViewBag.cotizacion = cotizacion.num_cotizacion;
             return View(producto);
@@ -160,18 +180,13 @@ namespace POOInventario.Controllers
             else
             {
                 var cotizacion = new dom.CotizacionD().BuscarCotizacion(x => x.id_cli == ideCli).Last();
-                foreach (var item in factura)
+                if (new dom.FacturasD().BuscarFactura(x=>x.num_cotizacion == cotizacion.num_cotizacion).Count() > 0)
                 {
-                    if (item.num_cotizacion == cotizacion.num_cotizacion)
-                    {
-                        esta = true;
-                        break;
-                    }
-                    else
-                    {
-                        esta = false;
-                        break;
-                    }
+                    esta = false;
+                }
+                else
+                {
+                    esta = true;
                 }
             }
             return esta;
@@ -221,7 +236,7 @@ namespace POOInventario.Controllers
                     total = producto.precio_venta * cantidad,
                     num_cotizacion = idCot
                 };
-                BajarStock(cantidad, producto.id_producto);
+                cotizacion.total = cotizacion.total +(float)detalleCo.total;
                 new dom.Detalle_cotizacionD().CrearDetalle(detalleCo);
                 return RedirectToAction("IndexCliente");
             }
@@ -237,11 +252,50 @@ namespace POOInventario.Controllers
                     total = producto.precio_venta * cantidad,
                     num_cotizacion = idCot
                 };
-                BajarStock(cantidad, producto.id_producto);
                 new dom.Detalle_cotizacionD().CrearDetalle(detalleCo);
                 return RedirectToAction("IndexCliente");
             }
             
+        }
+        [HttpGet]
+        public ActionResult ComprarOro(int id)
+        {
+            List<SelectListItem> tiempo = new List<SelectListItem>();
+            tiempo.Add(new SelectListItem { Value = "0", Text = "Al contado" });
+            tiempo.Add(new SelectListItem { Value = "6", Text = "6 meses" });
+            tiempo.Add(new SelectListItem { Value = "12", Text = "12 meses" });
+            var producto = new dom.ProductoD().ProductosPorID(id);
+            var pagos = new ent.PagosE();
+            ViewBag.Meses = tiempo;
+            ViewBag.Tipos = tipos();
+            return PartialView(producto);
+
+        }
+
+        public ActionResult ValidarCredito(int id)
+        {
+            int id_cli = (int) Session["id_cli"];
+            var cliente = new dom.ClienteD().ClientesPorID(id_cli);
+            if (cliente.ID_clasi==1)
+            {
+                return RedirectToAction("Comprar", id);
+
+            }
+            else if (cliente.ID_clasi==2)
+            {
+                Session["interes"] = 10;
+                return RedirectToAction("ComprarOro", id);
+            }else if (cliente.ID_clasi == 3)
+            {
+                Session["interes"] = 5;
+                return RedirectToAction("ComprarPlatino", id);
+            }
+            return View("errores");
+            
+        }
+        public ActionResult errores()
+        {
+            return View();
         }
     }
 }

@@ -82,6 +82,12 @@ namespace Dominio
             CreateMap<bd.Cotizacion, ent.CotizacionE>();
 
             CreateMap<ent.CotizacionE, bd.Cotizacion>();
+            CreateMap<bd.Facturas, ent.FacturaE>();
+
+            CreateMap<ent.FacturaE, bd.Facturas>();
+            CreateMap<bd.Detalle_Factura, ent.DetalleFacturaE>();
+
+            CreateMap<ent.DetalleFacturaE, bd.Detalle_Factura>();
         }
     }
 }

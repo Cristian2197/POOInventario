@@ -39,6 +39,7 @@
     <EntitySetMapping Name="Cotizacion">
       <EntityTypeMapping TypeName="InventarioPOOModel.Cotizacion">
         <MappingFragment StoreEntitySet="Cotizacion">
+          <ScalarProperty Name="total" ColumnName="total" />
           <ScalarProperty Name="fecha_cotizacion" ColumnName="fecha_cotizacion" />
           <ScalarProperty Name="id_cli" ColumnName="id_cli" />
           <ScalarProperty Name="Id_emp" ColumnName="Id_emp" />
@@ -103,6 +104,7 @@
     <EntitySetMapping Name="Facturas">
       <EntityTypeMapping TypeName="InventarioPOOModel.Facturas">
         <MappingFragment StoreEntitySet="Facturas">
+          <ScalarProperty Name="total" ColumnName="total" />
           <ScalarProperty Name="id_tipo_pago" ColumnName="id_tipo_pago" />
           <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
           <ScalarProperty Name="credito" ColumnName="credito" />

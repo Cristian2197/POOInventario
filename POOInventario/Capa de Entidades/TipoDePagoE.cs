@@ -10,10 +10,10 @@ namespace Capa_de_Entidades
     public class TipoDePagoE
     {
         [Display(Name = "ID de Tipo de Pago")]
-        public int id_tipo_pago { get; set; }
+        public Nullable <int>  id_tipo_pago { get; set; }
         [Display(Name = "Nombre")]
-        public String nombre { get; set; }
+        public  String nombre { get; set; }
         [Display(Name = "Interes")]
-        public String interes { get; set; }
+        public double interes { get; set; }
     }
 }

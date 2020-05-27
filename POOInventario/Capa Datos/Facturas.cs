@@ -29,6 +29,7 @@ namespace Capa_Datos
         public Nullable<bool> credito { get; set; }
         public Nullable<int> id_proveedor { get; set; }
         public Nullable<int> id_tipo_pago { get; set; }
+        public Nullable<decimal> total { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Detalle_Factura> Detalle_Factura { get; set; }

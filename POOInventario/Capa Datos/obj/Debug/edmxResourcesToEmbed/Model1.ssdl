@@ -39,6 +39,7 @@
     <Property Name="Id_emp" Type="int" />
     <Property Name="id_cli" Type="int" />
     <Property Name="fecha_cotizacion" Type="date" />
+    <Property Name="total" Type="money" />
   </EntityType>
   <EntityType Name="Detalle_cotizacion">
     <Key>
@@ -102,6 +103,7 @@
     <Property Name="credito" Type="bit" />
     <Property Name="id_proveedor" Type="int" />
     <Property Name="id_tipo_pago" Type="int" />
+    <Property Name="total" Type="money" />
   </EntityType>
   <EntityType Name="Inventario">
     <Key>
@@ -119,7 +121,7 @@
     <Property Name="id_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_factura" Type="int" />
     <Property Name="monto" Type="money" />
-    <Property Name="couta" Type="bit" />
+    <Property Name="couta" Type="int" />
     <Property Name="fecha_pago" Type="date" />
     <Property Name="activo" Type="bit" />
   </EntityType>

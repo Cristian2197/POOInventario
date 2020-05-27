@@ -5,6 +5,7 @@
     List<Capa_de_Entidades.Detalle_cotizacion> carrito = ViewBag.Carrito;
     List<Capa_de_Entidades.ProductoE> productos = ViewBag.Productos;
     int cotizacion = ViewBag.cotizacion;
+    int estado = ViewBag.EstadoCarrito;
 }
 
 <h2>IndexCliente</h2>
@@ -41,7 +42,7 @@
             <div class="card-body">
                 <h5 class="card-title">Coización</h5>
                 <ul class="list-group">
-                    @if (carrito.Count() > 0)
+                    @if (estado != 0)
                     {
                         foreach (var item in carrito)
                         {
@@ -54,13 +55,12 @@
                             }
                         }
                     }
-                    else
+                    else if (estado == 1)
                     {
                         <li class="list-group-item">No hay nada por aquí</li>
                     }
                 </ul>
-                <a href="#" class="btn btn-info">Guardar</a>
-                <a href="~/Productos/Comprar/@cotizacion" class="btn btn-danger">Comprar</a>
+                <button class="btn btn-info btnComprarCarrit" id="@carrito.Last().num_cotizacion" name="@carrito.Last().num_cotizacion" data-toggle="modal" data-target="#ModalCotizar">Comprar</button>
             </div>
         </div>
     </div>
@@ -85,6 +85,22 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="ModalCotizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="dvEliminarCliente"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section scripts
 {
     <script>
@@ -99,6 +115,26 @@
                     async: false,
                     success: function (response) {
                         $('#dvDetalleClientes').html(response);
+                    },
+                    error: function (response) {
+                        if (response.responseText != "") {
+                            alert(response.responseText);
+                        }
+                    }
+                });
+            });
+         });
+               $(document).ready(function () {
+            $(".btnComprarCarrit").on("click", function () {
+                var clienteId = $(this).attr("id");
+                var _url = '/Cotizacion/ComprarProducto/' + clienteId;
+                $.ajax({
+                    type: "Get",
+                    url: _url,
+                    data: {},
+                    async: false,
+                    success: function (response) {
+                        $('#dvEliminarCliente').html(response);
                     },
                     error: function (response) {
                         if (response.responseText != "") {

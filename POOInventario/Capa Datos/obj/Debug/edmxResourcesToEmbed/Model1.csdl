@@ -122,6 +122,7 @@
     <Property Name="Id_emp" Type="Int32" />
     <Property Name="id_cli" Type="Int32" />
     <Property Name="fecha_cotizacion" Type="DateTime" Precision="0" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Cliente" Relationship="InventarioPOOModel.FK_Cotizacion_Cliente" FromRole="Cotizacion" ToRole="Cliente" />
     <NavigationProperty Name="Empleados" Relationship="InventarioPOOModel.FK_Cotizacion_Empleados" FromRole="Cotizacion" ToRole="Empleados" />
     <NavigationProperty Name="Detalle_cotizacion" Relationship="InventarioPOOModel.FK_Detalle_cotizacion_Cotizacion" FromRole="Cotizacion" ToRole="Detalle_cotizacion" />
@@ -195,6 +196,7 @@
     <Property Name="credito" Type="Boolean" />
     <Property Name="id_proveedor" Type="Int32" />
     <Property Name="id_tipo_pago" Type="Int32" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Detalle_Factura" Relationship="InventarioPOOModel.FK_Detalle_Factura_Facturas" FromRole="Facturas" ToRole="Detalle_Factura" />
     <NavigationProperty Name="proveedor" Relationship="InventarioPOOModel.FK_Facturas_proveedor" FromRole="Facturas" ToRole="proveedor" />
     <NavigationProperty Name="Tipo_pago" Relationship="InventarioPOOModel.FK_Facturas_Tipo_pago" FromRole="Facturas" ToRole="Tipo_pago" />
@@ -218,7 +220,7 @@
     <Property Name="id_pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_factura" Type="Int32" />
     <Property Name="monto" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="couta" Type="Boolean" />
+    <Property Name="couta" Type="Int32" />
     <Property Name="fecha_pago" Type="DateTime" Precision="0" />
     <Property Name="activo" Type="Boolean" />
     <NavigationProperty Name="Facturas" Relationship="InventarioPOOModel.FK_Pagos_Facturas" FromRole="Pagos" ToRole="Facturas" />

@@ -1,0 +1,134 @@
+﻿@model IEnumerable<Capa_de_Entidades.CotizacionE>
+
+@{ 
+    int idcli = ViewBag.cliente;
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.num_cotizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_emp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_cli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_cotizacion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (idcli == item.id_cli)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.num_cotizacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_emp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_cli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fecha_cotizacion)
+                </td>
+                <td>
+                    <button class="btn btn-info Comprar btnComprar" id="@item.num_cotizacion" name="@item.num_cotizacion" data-toggle="modal" data-target="#ModalComprar">Comprar</button>
+                    <button id="@item.num_cotizacion" type="button" class="btn btn-danger btnEliminarCliente" data-toggle="modal" data-target="#ModalEliminar">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+<!-- Modal Eliminar-->
+<div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar categoria</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="dvEliminarCliente"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Crear Categoria-->
+<div class="modal fade" id="ModalComprar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="dvComprar"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section scripts
+        {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".btnEliminarCliente").click(function () {
+                var RolId = $(this).attr("id");
+                var _url = '/Cotizacion/Eliminar/' + RolId;
+                $.ajax({
+                    type: "Get",
+                    url: _url,
+                    data: {},
+                    async: false,
+                    success: function (response) {
+                        $('#dvEliminarCliente').html(response);
+                    },
+                    error: function (response) {
+                        if (response.responseText != "") {
+                            alert(response.responseText);
+                        }
+                    }
+                });
+            });
+        });
+         $(document).ready(function () {
+            $(".btnComprar").click(function () {
+                var RolId = $(this).attr("id");
+                var _url = '/Cotizacion/ComprarProducto/' + RolId;
+                $.ajax({
+                    type: "Get",
+                    url: _url,
+                    data: {},
+                    async: false,
+                    success: function (response) {
+                        $('#dvComprar').html(response);
+                    },
+                    error: function (response) {
+                        if (response.responseText != "") {
+                            alert(response.responseText);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+

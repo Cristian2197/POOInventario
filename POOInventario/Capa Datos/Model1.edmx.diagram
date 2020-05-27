@@ -5,21 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="dabc6d9b90c744e78b7d1274caee6152" Name="Diagram1" ZoomLevel="70">
-        <EntityTypeShape EntityType="InventarioPOOModel.Cargos" Width="1.5" PointX="1.5" PointY="21.125" />
+        <EntityTypeShape EntityType="InventarioPOOModel.Cargos" Width="1.5" PointX="1.5" PointY="21.625" />
         <EntityTypeShape EntityType="InventarioPOOModel.categorias" Width="1.5" PointX="3.75" PointY="12.875" />
-        <EntityTypeShape EntityType="InventarioPOOModel.Clasificacion" Width="1.5" PointX="1.5" PointY="23.875" />
-        <EntityTypeShape EntityType="InventarioPOOModel.Cliente" Width="1.5" PointX="3.75" PointY="23.5" />
-        <EntityTypeShape EntityType="InventarioPOOModel.Cotizacion" Width="1.5" PointX="6" PointY="21" />
+        <EntityTypeShape EntityType="InventarioPOOModel.Clasificacion" Width="1.5" PointX="1.5" PointY="19" />
+        <EntityTypeShape EntityType="InventarioPOOModel.Cliente" Width="1.5" PointX="3.75" PointY="18.5" />
+        <EntityTypeShape EntityType="InventarioPOOModel.Cotizacion" Width="1.5" PointX="6" PointY="20.875" />
         <EntityTypeShape EntityType="InventarioPOOModel.Detalle_cotizacion" Width="1.5" PointX="8.25" PointY="4.75" />
         <EntityTypeShape EntityType="InventarioPOOModel.Detalle_Factura" Width="1.5" PointX="5.25" PointY="9.5" />
         <EntityTypeShape EntityType="InventarioPOOModel.Detalle_inventario" Width="1.5" PointX="6" PointY="15.125" />
-        <EntityTypeShape EntityType="InventarioPOOModel.Empleados" Width="1.5" PointX="3.75" PointY="19" />
-        <EntityTypeShape EntityType="InventarioPOOModel.Facturas" Width="1.5" PointX="3" PointY="4.5" />
+        <EntityTypeShape EntityType="InventarioPOOModel.Empleados" Width="1.5" PointX="3.75" PointY="22.125" />
+        <EntityTypeShape EntityType="InventarioPOOModel.Facturas" Width="1.5" PointX="3" PointY="4.375" />
         <EntityTypeShape EntityType="InventarioPOOModel.Inventario" Width="1.5" PointX="3.75" PointY="15.25" />
         <EntityTypeShape EntityType="InventarioPOOModel.Pagos" Width="1.5" PointX="5.25" PointY="1.375" />
         <EntityTypeShape EntityType="InventarioPOOModel.Producto" Width="1.5" PointX="6" PointY="4.5" />
         <EntityTypeShape EntityType="InventarioPOOModel.proveedor" Width="1.5" PointX="0.75" PointY="5.125" />
-        <EntityTypeShape EntityType="InventarioPOOModel.Rol" Width="1.5" PointX="1.5" PointY="18.5" />
+        <EntityTypeShape EntityType="InventarioPOOModel.Rol" Width="1.5" PointX="1.5" PointY="24" />
         <EntityTypeShape EntityType="InventarioPOOModel.Tipo_pago" Width="1.5" PointX="0.75" PointY="2.25" />
         <AssociationConnector Association="InventarioPOOModel.FK_Empleados_Cargos" />
         <AssociationConnector Association="InventarioPOOModel.FK_Producto_categorias" />

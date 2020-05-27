@@ -44,6 +44,7 @@
           <Property Name="Id_emp" Type="int" />
           <Property Name="id_cli" Type="int" />
           <Property Name="fecha_cotizacion" Type="date" />
+          <Property Name="total" Type="money" />
         </EntityType>
         <EntityType Name="Detalle_cotizacion">
           <Key>
@@ -107,6 +108,7 @@
           <Property Name="credito" Type="bit" />
           <Property Name="id_proveedor" Type="int" />
           <Property Name="id_tipo_pago" Type="int" />
+          <Property Name="total" Type="money" />
         </EntityType>
         <EntityType Name="Inventario">
           <Key>
@@ -124,7 +126,7 @@
           <Property Name="id_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_factura" Type="int" />
           <Property Name="monto" Type="money" />
-          <Property Name="couta" Type="bit" />
+          <Property Name="couta" Type="int" />
           <Property Name="fecha_pago" Type="date" />
           <Property Name="activo" Type="bit" />
         </EntityType>
@@ -550,6 +552,7 @@
           <Property Name="Id_emp" Type="Int32" />
           <Property Name="id_cli" Type="Int32" />
           <Property Name="fecha_cotizacion" Type="DateTime" Precision="0" />
+          <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="Cliente" Relationship="InventarioPOOModel.FK_Cotizacion_Cliente" FromRole="Cotizacion" ToRole="Cliente" />
           <NavigationProperty Name="Empleados" Relationship="InventarioPOOModel.FK_Cotizacion_Empleados" FromRole="Cotizacion" ToRole="Empleados" />
           <NavigationProperty Name="Detalle_cotizacion" Relationship="InventarioPOOModel.FK_Detalle_cotizacion_Cotizacion" FromRole="Cotizacion" ToRole="Detalle_cotizacion" />
@@ -623,6 +626,7 @@
           <Property Name="credito" Type="Boolean" />
           <Property Name="id_proveedor" Type="Int32" />
           <Property Name="id_tipo_pago" Type="Int32" />
+          <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="Detalle_Factura" Relationship="InventarioPOOModel.FK_Detalle_Factura_Facturas" FromRole="Facturas" ToRole="Detalle_Factura" />
           <NavigationProperty Name="proveedor" Relationship="InventarioPOOModel.FK_Facturas_proveedor" FromRole="Facturas" ToRole="proveedor" />
           <NavigationProperty Name="Tipo_pago" Relationship="InventarioPOOModel.FK_Facturas_Tipo_pago" FromRole="Facturas" ToRole="Tipo_pago" />
@@ -646,7 +650,7 @@
           <Property Name="id_pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_factura" Type="Int32" />
           <Property Name="monto" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="couta" Type="Boolean" />
+          <Property Name="couta" Type="Int32" />
           <Property Name="fecha_pago" Type="DateTime" Precision="0" />
           <Property Name="activo" Type="Boolean" />
           <NavigationProperty Name="Facturas" Relationship="InventarioPOOModel.FK_Pagos_Facturas" FromRole="Pagos" ToRole="Facturas" />
@@ -921,6 +925,7 @@
           <EntitySetMapping Name="Cotizacion">
             <EntityTypeMapping TypeName="InventarioPOOModel.Cotizacion">
               <MappingFragment StoreEntitySet="Cotizacion">
+                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="fecha_cotizacion" ColumnName="fecha_cotizacion" />
                 <ScalarProperty Name="id_cli" ColumnName="id_cli" />
                 <ScalarProperty Name="Id_emp" ColumnName="Id_emp" />
@@ -985,6 +990,7 @@
           <EntitySetMapping Name="Facturas">
             <EntityTypeMapping TypeName="InventarioPOOModel.Facturas">
               <MappingFragment StoreEntitySet="Facturas">
+                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="id_tipo_pago" ColumnName="id_tipo_pago" />
                 <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
                 <ScalarProperty Name="credito" ColumnName="credito" />

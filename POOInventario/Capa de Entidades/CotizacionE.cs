@@ -12,6 +12,7 @@ namespace Capa_de_Entidades
         public Nullable <int> id_emp { get; set; }
         public int id_cli { get; set; }
         public DateTime fecha_cotizacion { get; set; }
+        public float total { get; set; }
 
     }
 }

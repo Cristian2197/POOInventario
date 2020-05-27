@@ -17,7 +17,7 @@ namespace Capa_Datos
         public int id_pago { get; set; }
         public Nullable<int> id_factura { get; set; }
         public Nullable<decimal> monto { get; set; }
-        public Nullable<bool> couta { get; set; }
+        public Nullable<int> couta { get; set; }
         public Nullable<System.DateTime> fecha_pago { get; set; }
         public Nullable<bool> activo { get; set; }
     

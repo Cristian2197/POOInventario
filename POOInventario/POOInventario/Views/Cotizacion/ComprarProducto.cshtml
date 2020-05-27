@@ -1,0 +1,110 @@
+﻿@model Capa_de_Entidades.FacturaE
+
+@{ 
+    List<SelectListItem> Tipos = ViewBag.Tipos;
+    List<SelectListItem> meses = ViewBag.MEses;
+    Capa_de_Entidades.CotizacionE coti = ViewBag.cotizacion;
+    Capa_de_Entidades.ClienteE cliente = ViewBag.Cliente;
+    List<Capa_de_Entidades.Detalle_cotizacion> detalle = ViewBag.detale;
+    List<Capa_de_Entidades.ProductoE> productos = ViewBag.Productos; 
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div id="dvEliminarCliente">
+        <form action="/Cotizacion/ComprarProducto/" method="post">
+            <div class="form-horizontal">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    <div class="row">
+                        <p><strong>Cliente: </strong></p><p> @cliente.nombre @cliente.apellido</p>
+                    </div>
+                </div>
+
+                <div class="form-group" hidden>
+                    <p>N° Cliente: </p>
+                    <input type="number" name="cliente" min="@cliente.id_cli" max="@cliente.id_cli" value="@cliente.id_cli" class="form-control"  />
+                </div>
+
+
+                <div class="form-group">
+                    N° cotización:
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.num_cotizacion, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.num_cotizacion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                @if (cliente.ID_clasi != 1)
+                {
+                    <div class="form-group">
+                        Crédito:
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                <input type="text" value="Aplica" class="form-control" disabled />
+                                @Html.HiddenFor(model => model.credito, new { @Value = "true" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        Meses:
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                @Html.DropDownList("meses", meses, null, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group">
+                        Crédito:
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                <input type="text" value="No Aplica" class="form-control" disabled />
+                                @Html.HiddenFor(model => model.credito, new { @Value = "false" })
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+                <div class="form-group">
+                    Tipo de pago:
+                    <div class="col-md-10">
+                        @Html.DropDownList("id_tipo_pago", Tipos, null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.id_tipo_pago, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+
+                <ul class="list-group">
+                    @foreach (var item in detalle)
+                    {
+                        foreach (var item2 in productos)
+                        {
+                            if (item.id_producto == item2.id_producto)
+                            {
+                                <li class="list-group-item">(@item.cantidad) @item2.nombre <p align="right">@String.Format("{0:C2}", item2.precio_venta * item.cantidad)</p></li>
+                                break;
+                            }
+                        }
+                    }
+                </ul>
+                
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Comprar" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+}

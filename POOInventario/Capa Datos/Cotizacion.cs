@@ -24,6 +24,7 @@ namespace Capa_Datos
         public Nullable<int> Id_emp { get; set; }
         public Nullable<int> id_cli { get; set; }
         public Nullable<System.DateTime> fecha_cotizacion { get; set; }
+        public Nullable<decimal> total { get; set; }
     
         public virtual Cliente Cliente { get; set; }
         public virtual Empleados Empleados { get; set; }

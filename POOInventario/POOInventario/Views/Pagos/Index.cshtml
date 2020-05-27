@@ -53,9 +53,7 @@
             @Html.DisplayFor(modelItem => item.activo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            <a href="~/Pagos/PagarPago/@item.id_pago" class="btn btn-danger">Pagar</a>
         </td>
     </tr>
 }

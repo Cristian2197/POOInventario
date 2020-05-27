@@ -72,7 +72,7 @@ namespace Repositorio
 
         public IEnumerable<T> TraerTodo()
         {
-            return _context.Set<T>().AsNoTracking();
+            return _context.Set<T>();
         }
 
         public T TraerUno(Expression<Func<T, bool>> predicado)
