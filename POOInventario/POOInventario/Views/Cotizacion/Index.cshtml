@@ -26,7 +26,30 @@
 
     @foreach (var item in Model)
     {
-        if (idcli == item.id_cli)
+        if (idcli == 0)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.num_cotizacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_emp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_cli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fecha_cotizacion)
+                </td>
+                <td>
+                    <button class="btn btn-info Comprar btnComprar" id="@item.num_cotizacion" name="@item.num_cotizacion" data-toggle="modal" data-target="#ModalComprar">Comprar</button>
+                    <button id="@item.num_cotizacion" type="button" class="btn btn-danger btnEliminarCliente" data-toggle="modal" data-target="#ModalEliminar">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        }
+        else if (idcli == item.id_cli)
         {
             <tr>
                 <td>

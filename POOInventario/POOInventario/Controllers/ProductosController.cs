@@ -218,6 +218,7 @@ namespace POOInventario.Controllers
             var cliente = new dom.ClienteD().BuscarUnCliente(x => x.numero_tarjeta == tarjeta);
             var producto = new dom.ProductoD().ProductosPorID(id);
             bool vali = ValidarCotiFactu(cliente.id_cli);
+           
             if (vali == false)
             {
                 var cotizacion = new ent.CotizacionE()
@@ -227,6 +228,8 @@ namespace POOInventario.Controllers
                 };
                 new dom.CotizacionD().CrearCotizacion(cotizacion);
                 int idCot = new dom.CotizacionD().BuscarCotizacion(x => x.id_cli == cliente.id_cli).Last().num_cotizacion;
+                var coti  = new dom.CotizacionD().CotizacionPorID(idCot);
+                float total = coti.total;
                 var detalleCo = new ent.Detalle_cotizacion()
                 {
                     id_cli = cliente.id_cli,
@@ -236,13 +239,16 @@ namespace POOInventario.Controllers
                     total = producto.precio_venta * cantidad,
                     num_cotizacion = idCot
                 };
-                cotizacion.total = cotizacion.total +(float)detalleCo.total;
+                coti.total = total + (float)detalleCo.total;
+                new dom.CotizacionD().ModificarCotizacion(coti);
                 new dom.Detalle_cotizacionD().CrearDetalle(detalleCo);
                 return RedirectToAction("IndexCliente");
             }
             else
             {
                 int idCot = new dom.CotizacionD().BuscarCotizacion(x => x.id_cli == cliente.id_cli).Last().num_cotizacion;
+                var coti = new dom.CotizacionD().CotizacionPorID(idCot);
+                float total = coti.total;
                 var detalleCo = new ent.Detalle_cotizacion()
                 {
                     id_cli = cliente.id_cli,
@@ -252,6 +258,8 @@ namespace POOInventario.Controllers
                     total = producto.precio_venta * cantidad,
                     num_cotizacion = idCot
                 };
+                coti.total = total + (float)detalleCo.total;
+                new dom.CotizacionD().ModificarCotizacion(coti);
                 new dom.Detalle_cotizacionD().CrearDetalle(detalleCo);
                 return RedirectToAction("IndexCliente");
             }
@@ -296,6 +304,16 @@ namespace POOInventario.Controllers
         public ActionResult errores()
         {
             return View();
+        }
+
+        public ActionResult EliminarDetalle(int id)
+        {
+            var detalle = new dom.Detalle_cotizacionD().DetalleCotizacionPorID(id);
+            var cotizacion = new dom.CotizacionD().CotizacionPorID(detalle.num_cotizacion);
+            cotizacion.total = cotizacion.total - (float)detalle.total;
+            new dom.CotizacionD().ModificarCotizacion(cotizacion);
+            new dom.Detalle_cotizacionD().EliminarDetalle(detalle);
+            return RedirectToAction("IndexCliente");
         }
     }
 }

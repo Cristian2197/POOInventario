@@ -11,6 +11,7 @@ namespace POOInventario
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        [Obsolete]
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

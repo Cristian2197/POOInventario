@@ -41,7 +41,7 @@ namespace POOInventario.Controllers
 
         }
 
-        public void BajarStockDetalle(int idCotizacion) 
+        public void BajarStockDetalle(int idCotizacion)
         {
             var detalle = new dom.Detalle_cotizacionD().BuscarDetalle(x => x.num_cotizacion == idCotizacion);
             foreach (var item in detalle)
@@ -52,11 +52,35 @@ namespace POOInventario.Controllers
         // GET: Cotizacion
         public ActionResult Index(int? id)
         {
-            int idCli = 3;
-            var _cotizaciones = new dom.CotizacionD().CotizacionList();
-            ViewBag.cliente = idCli;
-            return View(_cotizaciones);
+            if (id != null)
+            {
+                if (Session["id_cli"] != null)
+                {
+
+                    int idCli = (int)id;
+                    var _cotizaciones = new dom.CotizacionD().BuscarCotizacion(x => x.id_cli == idCli);
+                    ViewBag.cliente = idCli;
+                    return View(_cotizaciones);
+                }
+                
+                else if(Session["sesionRol"] != null)
+                {
+                    var _cotizaciones = new dom.CotizacionD().CotizacionList();
+                    ViewBag.cliente = 0;
+                    return View(_cotizaciones);
+                }
+                else
+                {
+                    return RedirectToAction("errores", "Productos");
+                }
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
         }
+
         [HttpGet]
         public ActionResult Eliminar(int? id)
         {
@@ -86,7 +110,7 @@ namespace POOInventario.Controllers
             meses.Add(new SelectListItem { Value = "0", Text = "Comprar al contado" });
             meses.Add(new SelectListItem { Value = "6", Text = "6 meses" });
             meses.Add(new SelectListItem { Value = "12", Text = "12 meses" });
-            ViewBag.Cliente = clientes; 
+            ViewBag.Cliente = clientes;
             ViewBag.MEses = meses;
             ViewBag.Tipos = tipos();
             ViewBag.cotizacion = cotizacion;
@@ -100,7 +124,7 @@ namespace POOInventario.Controllers
         {
             var clienteE = new dom.ClienteD().ClientesPorID(cliente);
             var cotizacion = new dom.CotizacionD().CotizacionPorID(factura.num_cotizacion);
-           
+
             if (clienteE.ID_clasi == 1)
             {
                 factura.total = cotizacion.total;
@@ -258,7 +282,7 @@ namespace POOInventario.Controllers
                     var pago2 = new ent.PagosE()
                     {
                         id_factura = uFactura.Last().id_factura,
-                        couta = 6 -1 ,
+                        couta = 6 - 1,
                         monto = totalTOTAL,
                         fecha_pago = DateTime.Now.AddMonths(1),
                         activo = true
@@ -267,7 +291,7 @@ namespace POOInventario.Controllers
                     new dom.PagosD().CrearPago(pago2);
                     return RedirectToAction("Index", "Pagos");
                 }
-                
+
 
             }
             return RedirectToAction("IndexCliente", "Productos");

@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Capa_de_Entidades.ProductoE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pagina Principal</h2>
+
+<div class="col-md-9">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@item.nombre</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">No.Producto: @item.id_producto</h6>
+                    <p class="card-text">Proveedor es : @item.id_proveedor</p>
+                    <p class="card-text">Lote  : @item.num_lote</p>
+                    <p class="card-text">Precio de venta : @item.precio_venta</p>
+                    <p class="card-text">Precio de compra : @item.precio_compra</p>
+                    <p class="card-text">Categoria : @item.id_categoria</p>
+
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button class="btn btn-success btnComprar" id="@item.id_producto" name="@item.id_producto" data-toggle="modal" data-target="#ModalComprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_proveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio_compra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio_venta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.can_existente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_lote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_categoria)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_proveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio_compra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio_venta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.can_existente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_lote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_categoria)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>*@

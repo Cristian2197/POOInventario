@@ -231,6 +231,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CotizacionController.cs" />
     <Compile Include="Controllers\FacturasController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventarioController.cs" />
     <Compile Include="Controllers\Detalle_InventarioController.cs" />
     <Compile Include="Controllers\CargosController.cs" />
@@ -310,6 +311,7 @@
     <Content Include="Views\Cotizacion\Index.cshtml" />
     <Content Include="Views\Cotizacion\Eliminar.cshtml" />
     <Content Include="Views\Cotizacion\ComprarProducto.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

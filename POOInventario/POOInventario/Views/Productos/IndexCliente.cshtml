@@ -6,15 +6,13 @@
     List<Capa_de_Entidades.ProductoE> productos = ViewBag.Productos;
     int cotizacion = ViewBag.cotizacion;
     int estado = ViewBag.EstadoCarrito;
+    Capa_de_Entidades.CotizacionE actual = new Dominio.CotizacionD().CotizacionPorID(cotizacion);
 }
 
-<h2>IndexCliente</h2>
+<h2>Compra Aqui tus Productos!</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-8">
         <div class="row">
             @foreach (var item in Model)
             {
@@ -37,12 +35,13 @@
             }
         </div>
     </div>
-    <div class="col-md-2">
-        <div class="card" style="width: 18rem;">
+    <div class="col-md-4">
+        <div class="card" style="width: 100%;">
             <div class="card-body">
-                <h5 class="card-title">Coización</h5>
+                <li class="list-group-item list-group-item-primary"><center>Cotización</center></li>
+                <br />
                 <ul class="list-group">
-                    @if (estado != 0)
+                    @if (carrito.Count() != 0)
                     {
                         foreach (var item in carrito)
                         {
@@ -50,17 +49,25 @@
                             {
                                 if (item2.id_producto == item.id_producto)
                                 {
-                                    <li class="list-group-item">(@item.cantidad)@item2.nombre <p align="right">@item.total</p></li>
+                                    <a href="~/Productos/EliminarDetalle/@item.id_detalle_cotizacion" class="list-group-item list-group-item-action">(@item.cantidad)@item2.nombre   <span style="float:right">@String.Format("{0:C2}", item.total)</span></a>
+                                    break;
                                 }
                             }
                         }
                     }
-                    else if (estado == 1)
+                    else if (carrito.Count() == 0)
                     {
                         <li class="list-group-item">No hay nada por aquí</li>
                     }
                 </ul>
-                <button class="btn btn-info btnComprarCarrit" id="@carrito.Last().num_cotizacion" name="@carrito.Last().num_cotizacion" data-toggle="modal" data-target="#ModalCotizar">Comprar</button>
+                <br />
+                @if (carrito.Count() != 0)
+                {
+                    <li class="list-group-item list-group-item-primary">Total:  <p align="right"> @String.Format("{0:C2}", actual.total)</p></li>
+                    <br />
+                    <button class="list-group-item list-group-item-action list-group-item-danger btnComprarCarrit" id="@carrito.Last().num_cotizacion" name="@carrito.Last().num_cotizacion" data-toggle="modal" data-target="#ModalCotizar"><center>Comprar</center></button>
+                }
+
             </div>
         </div>
     </div>
