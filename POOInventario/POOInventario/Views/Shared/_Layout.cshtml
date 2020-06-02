@@ -1,21 +1,21 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-   
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>PEPITOS S.A.</title>
-        <!-- Tell the browser to be responsive to screen width -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/3ca8aac0a3.js" crossorigin="anonymous"></script>
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="~/Scripts/css/adminlte.min.css">
-        <!-- Google Font: Source Sans Pro -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PEPITOS S.A.</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3ca8aac0a3.js" crossorigin="anonymous"></script>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Scripts/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -27,7 +27,7 @@
 
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0 flex-end">
                 @if (Session["sesionRol"] == null && Session["sesionCli"] == null)
                 {
 
@@ -142,8 +142,8 @@
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                             <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
-                           
+                            with font-awesome or any other icon font library -->
+
                             <li class="nav-item has-treeview">
                                 @if (Session["id_cli"] != null)
                                 {

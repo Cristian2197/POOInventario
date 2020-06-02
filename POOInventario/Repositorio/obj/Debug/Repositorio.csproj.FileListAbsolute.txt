@@ -54,3 +54,15 @@ C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\obj\Debug\R
 C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
 C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\obj\Debug\Repositorio.dll
 C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Repositorio\obj\Debug\Repositorio.pdb
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\bin\Debug\Repositorio.dll.config
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\bin\Debug\Repositorio.dll
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\bin\Debug\EntityFramework.dll
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\bin\Debug\EntityFramework.xml
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.csprojAssemblyReference.cache
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.csproj.CopyComplete
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.dll
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Repositorio\obj\Debug\Repositorio.pdb

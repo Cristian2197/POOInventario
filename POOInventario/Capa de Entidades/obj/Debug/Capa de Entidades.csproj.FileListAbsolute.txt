@@ -28,3 +28,9 @@ C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Capa de Entidades\bin\D
 C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Capa de Entidades\bin\Debug\Capa_de_Entidades.pdb
 C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Capa de Entidades\obj\Debug\Capa_de_Entidades.dll
 C:\Users\crist\Source\Repos\POOInventario4\POOInventario\Capa de Entidades\obj\Debug\Capa_de_Entidades.pdb
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa_de_Entidades.dll
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Capa de Entidades\bin\Debug\Capa_de_Entidades.pdb
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csprojAssemblyReference.cache
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa de Entidades.csproj.CoreCompileInputs.cache
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa_de_Entidades.dll
+C:\Users\alcid\Documents\Visual Studio\POOInventario\POOInventario\Capa de Entidades\obj\Debug\Capa_de_Entidades.pdb
